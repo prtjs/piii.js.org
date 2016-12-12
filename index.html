@@ -2,38 +2,71 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
-    <title>Piii.js</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Nome do Projeto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   </head>
   <body>
-    <div class="page">
-      <div class="title">
-        <h1>Piii.js</h1>
-        <span class="description">Um avançado filtro de palavrões da língua portuguesa.</span>
+    <header>
+      <div>
+        <h1 class="name">Piii.js</h1>
+        <p class="description">Um avançado filtro de palavrões da língua portuguesa.</p>
       </div>
-      <p class="menu">
-        <b><a href="https://github.com/theuves/piii.js/stargazers">Estrelar</a></b> •
-        <b><a href="https://github.com/theuves/piii.js/fork">Bifurcar</a></b> •
-        <b><a href="https://github.com/theuves/piii.js#readme">Documentação</a></b>
-      </p>
-      <div class="hr"></div>
-      <p>
-        <a href="https://github.com/theuves/piii.js">Piii.js</a> lhe permite filtrar qualquer palavrão (<a href="https://pt.wikipedia.org/wiki/Palavra_de_baixo_cal%C3%A3o">palavra de baixo calão</a>) utilizado na língua portuguesa em uma <i><a href="https://pt.wikipedia.org/wiki/Cadeia_de_caracteres">string</a></i>, independente da forma que ele tenha sido escrito.
-      </p>
-      <p class="button">
-        <a href="#" id="btn" class="button"><b>Download</b> v<span id="ver">0.0.0</span></a>
-      </p>
-    </div>
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script>
-        $.getJSON('https://api.github.com/repos/theuves/piii.js/tags', function (data) {
-            if (data[0]) {
-                var obj = data[0];
-
-                document.querySelector('#btn').href = obj.zipball_url;
-                document.querySelector('#ver').innerHTML = obj.name;
-            }
-        });
-    </script>
+      <nav class="nav">
+        <ul class="ul">
+          <li>
+            <a href="https://github.com/theuves/piii.js/archive/master.zip"><span class="octicon octicon-file-zip"></span> download (.zip)</a>
+          </li>
+          <li>
+            <a href="https://github.com/theuves/piii.js/archive/master.tar.gz"><span class="octicon octicon-cloud-download"></span> download (.tar.gz)</a>
+          </li>
+          <li>
+            <a href="https://github.com/theuves/piii.js"><span class="octicon octicon-octoface"></span> ver no github</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Piii.js</h1>
+      <blockquote>Um avançado filtro de palavrões.</blockquote>
+      <p>Piii.js é uma biblioteca JavaScript que lhe permite filtrar qualquer palavrão (<a href="https://pt.wikipedia.org/wiki/Palavra_de_baixo_cal%C3%A3o">palavra de baixo calão</a>) utilizado na língua portuguesa em uma <i><a href="https://pt.wikipedia.org/wiki/Cadeia_de_caracteres">string</a></i>, independente da forma que ele tenha sido escrita.</p>
+      <h2>Características</h2>
+      <ul>
+        <li>ignora o uso de qualquer tipo acentuação</li>
+        <li>ignora se as palavras estão em caixa alta ou baixa</li>
+        <li>ignora números que possam substituir letras</li>
+        <li>ignora letras repetidas</li>
+      </ul>
+      <p>São filtradas apenas palavras impróprias, ofensivas, agressivas ou obsenas sob o ponto de vista geral da sociedade. Palavras que não são consideradas impróprias por todos (como “merda” que pode não ser vista por alguns como de baixo calão) ou que possuam um duplo sentido junto a uma palavra comum (como “cacete” ou “pau”) não serão filtradas. Porém, será possível adicionar mais palavras ao filtro (você verá como logo abaixo).</p>
+      <h2>Instalação</h2>
+      <p>Instale-o com <a href="https://npmjs.com/"><code>npm</code></a>, <code>npm i piii</code> ou com <a href="https://bower.io/"><code>bower</code></a>, <code>bower i piii.js</code>.</p>
+      <h2>Exemplos</h2>
+      <p>Veja alguns exemplos abaixo com diferentes tentativas de burlá-lo.</p>
+      <pre><code>piii('Vá tomar no cú!'); // retorna 'Vá tomar no **!'
+piii('Vá se ⓕⓞⓓⓔⓡ!'); // retorna 'Vá se *****!'
+piii('Seu fdp!'); // retorna 'Seu ***!'
+piii('Cúzãozãozão'); // retorna '***********'
+piii('Filho da ᵽṻțặ!'); // retorna 'Filho da ****!'
+piii('Que porrrrra é essa?'); // retorna 'Que ******** é essa?'</code></pre>
+      <p>Você também pode escolher o caractere que substituirá cada letra do palavrão:</p>
+      <pre><code>piii('Vá se foder!', {censura: 'π'}); // retorna 'Vá se πππππ!'</code></pre>
+      <p>Por padrão as letras são substituídas pelo caractere <code>*</code>. Observe que a <i>string</i> informada para substituir as letras deve conter apenas um caractere, caso contrário elas serão substituidas pelo caractere padrão, <code>*</code>. Caso queira substituir todo o palavrão por uma sequência de caracteres, você pode fazer como no exemplo abaixo:</p>
+      <pre><code>piii('Vá se foder!', {censura: '(piii)', completo: true}); // 'Vá se (piii)!'</code></pre>
+      <p>Você também poderá adicionar mais palavrões ao filtro, veja o exemplo:</p>
+      <pre><code>piii('Que cacete! Seu m3rdinha!', {
+    censura: '(piii)',
+    completo: true,
+    extras: [
+        '(c|k)acet(e|i|inho|ao)',
+        'merd(a|inha|ona|ao|a(d|c)a)'
+    ]
+}); // isto retornará 'Que (piii)! Seu (piii)!'</code></pre>
+      <p>Onde <code>extras</code> deverá ser uma <i>array</i> contendo os palavrões dentro de uma cadeia de caracteres, podendo usar expressões regulares e <b>não</b> havendo a necessidade de passar caracteres acentuados, por exemplo, ao invés de usar <code>merdão</code> (com acento), você pode simplesmente usar <code>merdao</code>, pois todos os acentos, caracteres repetidos ou números que possam substituir letras serão ignorados.</p>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2016 Matheus Alves</p>
+      <p>Site por Matheus Alves</p>
+    </footer>
   </body>
 </html>
