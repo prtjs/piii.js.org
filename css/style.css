@@ -1,16 +1,20 @@
+html {
+  font-size: 16px;
+}
+
 body, .name, .description {
   margin: 0;
   font-family: 'Nunito Sans', sans-serif;
 }
 
 code {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 header {
   margin: 0;
   padding: 0;
-  background-color: #f44336;
+  background: linear-gradient(#4caf50, #8bc34a);
   text-align: center;
   box-shadow: 0 1px 3px 0 #666;
 }
@@ -24,7 +28,7 @@ header > div {
 }
 
 .description {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-style: italic;
   color: #eee;
 }
@@ -49,12 +53,12 @@ nav {
 
 .ul > li > a {
   display: block;
-  padding: 24px 30px;
-  font-size: 14px;
+  padding: 1.5rem 1.875rem;
+  font-size: 0.875rem;
   text-decoration: none;
   text-transform: uppercase;
   color: white;
-  transition: background-color 0.3s linear;
+  transition: background-color 0.18s linear;
 }
 
 .ul > li > a:hover {
@@ -79,20 +83,24 @@ h1, h2, h3, h4, h5, h6, p, blockquote {
 main h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding-top: 24px;
-  font-size: 100%;
   color: #111;
   border-bottom: solid 1px #eee;
 }
 
-h1, main h1 {font-size: 50px;}
-h2 {font-size: calc(50px - 6px);}
-h3 {font-size: calc(50px - (2 * 6px));}
-h4 {font-size: calc(50px - (3 * 6px));}
-h5 {font-size: calc(50px - (4 * 6px));}
-h6 {font-size: calc(50px - (5 * 6px));}
+h1, main h1 {font-size: 3.125rem;}
+h2 {font-size: 2.75rem;}
+h3 {font-size: 2.375rem;}
+h4 {font-size: 2rem;}
+h5 {font-size: 1.625rem;}
+h6 {font-size: 1.25rem;}
+
+header > div > h1 {
+  font-size: 4.375rem;
+  font-weight: lighter;
+}
 
 main p, main blockquote, main li {
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 main p, main li {
@@ -102,7 +110,7 @@ main p, main li {
 main > blockquote {
   margin: 22px 0 22px 0;
   padding: 0 0 0 20px;
-  border-left: solid 6px #f44336;
+  border-left: solid 6px #4caf50;
   color: #666;
 }
 
@@ -125,7 +133,7 @@ main pre > code {
 }
 
 main a {
-  color: #f44336;
+  color: #4caf50;
   font-weight: bold;
 }
 
@@ -142,7 +150,7 @@ main hr {
 main table {
   margin: 22px 0 22px 0;
   width: 100%;
-  font-size: 20px;
+  font-size: 1.25rem;
   border-collapse: collapse;
   padding: 0;
 }
@@ -152,7 +160,7 @@ main th {
 }
 
 main td {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 main td, main th {
@@ -176,13 +184,13 @@ main > .image p {
   text-align: center;
   color: gray;
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: italic;
 }
 
 footer {
   text-align: center;
-  background-color: #f44336;
+  background: linear-gradient(#8bc34a, #4caf50);
   margin: 0;
   padding: 50px 0;
   border-top: solid 10px #333;
@@ -190,20 +198,25 @@ footer {
 }
 
 footer p {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin: 0;
   color: #eee;
 }
 
 ::selection {
   color: white;
-  background-color: #f44336;
+  background-color: #4caf50;
 }
 
 @media screen and (max-width: 880px) {
+  html {
+    font-size: 14px;
+  }
+
   header > div {
     padding: 60px 0 60px 0;
   }
+
 
   main {
     margin: auto 50px auto 50px;
@@ -211,11 +224,20 @@ footer p {
   }
 
   .ul {
+    text-align: left;
     display: inline;
+  }
+
+  .octicon {
+    float: right;
   }
 }
 
 @media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+
   header > div {
     padding: 40px 0 40px 0;
   }
