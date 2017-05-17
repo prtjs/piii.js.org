@@ -1,121 +1,29 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <title>Piii.js</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Piii.js ― Um avançado filtro de palavrões.</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
-    <link rel="stylesheet" href="css/hijs-style.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <header>
-      <div>
-        <h1 class="name">Piii.js</h1>
-        <p class="description">Um avançado filtro de palavrões da língua portuguesa.</p>
-      </div>
-      <nav class="nav">
-        <ul class="ul">
-          <li>
-            <a href="https://github.com/theuves/piii.js/archive/master.zip"><span class="octicon octicon-file-zip"></span> download (.zip)</a>
-          </li>
-          <li>
-            <a href="https://github.com/theuves/piii.js/archive/master.tar.gz"><span class="octicon octicon-cloud-download"></span> download (.tar.gz)</a>
-          </li>
-          <li>
-            <a href="https://github.com/theuves/piii.js"><span class="octicon octicon-octoface"></span> ver no github</a>
-          </li>
-        </ul>
-      </nav>
+      <h1>Piii<span class="js">.js</span></h1>
+      <p>Um avançado filtro de palavrões.</p>
     </header>
+    <nav>
+      <a href="https://github.com/theuves/piii.js#readme">
+        <span class="octicon octicon-book"></span> Ver a Documentação
+      </a>
+      <a href="https://github.com/theuves/piii.js/archive/master.zip">
+        <span class="octicon octicon-cloud-download"></span> Baixar v2.2.4
+      </a>
+    </nav>
     <main>
-<h1 id="piiijs">Piii.js</h1>
-<blockquote>
-<p>Um avançado filtro de palavrões.</p>
-</blockquote>
-<p><a href="https://travis-ci.org/theuves/piii.js"><img src="https://travis-ci.org/theuves/piii.js.svg?branch=master" alt="Build Status" /></a></p>
-<h2 id="caractersticas">Características</h2>
-<ul>
-<li>ignora o uso de qualquer tipo de acentuação</li>
-<li>ignora se as palavras(ões) estão em caixa alta ou baixa</li>
-<li>ignora números que possam substituir letras</li>
-<li>ignora letras repetidas</li>
-</ul>
-<h2 id="instalao">Instalação</h2>
-<p>Instale-o via linha de comando com:</p>
-<ul>
-<li><a href="http://bower.io/"><em>bower</em></a> ― <code>bower install --save piii.js</code></li>
-<li><a href="https://npmjs.com/"><em>npm</em></a> ― <code>npm install --save piii</code></li>
-</ul>
-<h2 id="sintaxe">Sintaxe</h2>
-<pre><code>piii(string[, censura[, exceções]])
-</code></pre>
-<h3 id="parmetros">Parâmetros</h3>
-<ul>
-<li><code>string</code> ― A <em>string</em> que será filtrada.</li>
-<li><code>censura</code> (<em>opcional</em>) ― Uma <em>string</em> para substituir cada palavrão, ou uma função para processar o palavrão antes de substituí-lo na <em>string</em>. Por padrão <code>censura</code> é um <code>*</code> (asterisco).</li>
-<li><code>exceções</code> (<em>opcional</em>) ― Uma array com uma lista dos palavrões que não devem ser filtrados.</li>
-</ul>
-<h4 id="oparmetrocensuracomoumafuno">O Parâmetro <code>censura</code> [Como Uma Função]</h4>
-<p>Este parâmetro pode ser uma outra função que recebe como único parâmetro uma <em>string</em> com o palavrão que está sendo filtrado no momento, e deve retornar uma <em>string</em> que substituirá este mesmo palavrão.</p>
-<p>Veja um exemplo (que adiciona a <em>tag HTML</em> <code>&lt;del&gt;</code> entre os palavrões):</p>
-<pre><code class="js language-js">piii("Que porra é essa?", function (palavrao) {
-  return "&lt;del&gt;" + palavrao + "&lt;/del&gt;";
-});
-
-// Retorna "Que &lt;del&gt;porra&lt;/del&gt; é essa?".
-</code></pre>
-<h4 id="oparmetroexcees">O Parâmetro <code>exceções</code></h4>
-<p>Nem todos os palavrões são vistos como impróprios, ofensivos ou obsenos por todas as pessoas, portanto é possível definir palavrões que não devem ser filtrados na <em>string</em>.</p>
-<p>Veja abaixo a lista de palavrões podem ser usados:</p>
-<ul>
-<li><code>bilau</code></li>
-<li><code>boceta</code></li>
-<li><code>caralho</code></li>
-<li><code>cu</code></li>
-<li><code>merda</code></li>
-<li><code>pepeca</code></li>
-<li><code>pinto</code></li>
-<li><code>piroca</code></li>
-<li><code>porra</code></li>
-<li><code>punheta</code></li>
-<li><code>puta</code></li>
-<li><code>foder</code></li>
-</ul>
-<p>Veja um exemplo (que desconsidera <em>merda</em> como um palavrão):</p>
-<pre><code class="js language-js">piii("Que porra é essa? Que merda. Vá se foder!", undefined, [
-  "merda"
-]);
-
-// Retorna "Que * é essa? Que merda. Vá se *!".
-</code></pre>
-<p><strong>Obs.</strong>: com isto, é desconsiderado todas as formas de se escrever o palavrão (como no exemplo acima, seria desconsiderado, tanto <em>merda</em> quanto <em>merdinha</em>, <em>merrrda</em>, <em>m3rd4</em>, etc.).</p>
-<h5 id="filtragemdaspalavras">Filtragem das Palavras</h5>
-<p>O palavrões mostrados acima estão escrito de uma forma correta (e assim devem ser passados na <em>array</em>), mas durante a filtragem eles podem ser considerados mesmo que estejam ortográficamente errados (normalmente de uma forma proposital).</p>
-<p>Formas de escritas ortográficamente erradas que são filtradas:</p>
-<ul>
-<li><em>buceta</em> ― com <em>u</em></li>
-<li><em>cuh</em> ― como <em>h</em> representando o acento agudo no <em>u</em></li>
-<li><em>fuder</em> ― com <em>u</em> (neste caso é filtrado toda a sua conjugação, exceto no presente do indicativo e subjuntivo)</li>
-<li><em>karalho</em>, <em>ku</em> e <em>piroka</em> ― com <em>k</em> substituindo o <em>c</em></li>
-<li><em>poha</em> ― com o <em>h</em> substituindo o <em>rr</em></li>
-<li><em>ponheta</em> ― com <em>o</em></li>
-</ul>
-<h2 id="exemplos">Exemplos</h2>
-<p>Veja alguns exemplos abaixo com diferentes tentativas de burlá-lo.</p>
-<pre><code class="js language-js">piii("Vá tomar no cú!"); // Retorna "Vá tomar no *!".
-piii("Vá se ⓕⓞⓓⓔⓡ!"); // Retorna "Vá se *!".
-piii("Que m3rd4."); // Retorna "Que *.".
-piii("Filho da ᵽṻțặ!"); // Retorna "Filho da *!".
-piii("Que porrrrra é essa?"); // Retorna "Que * é essa?".
-</code></pre>
-<h2 id="licena">Licença</h2>
-<p>MIT (<a href="https://github.com/theuves/piii.js/blob/master/license">veja o arquivo</a>)</p>
+      <pre><code onclick="select(this);">npm install --save piii</code></pre>
     </main>
-    <footer>
-      <p>Copyright &copy; 2016 Matheus Alves</p>
-      <p>Site por Matheus Alves</p>
-    </footer>
-    <script src="js/hijs.js"></script>
+    <script src="js/select.js"></script>
   </body>
 </html>
