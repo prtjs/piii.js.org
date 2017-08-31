@@ -1,0 +1,10 @@
+{
+  "name": "piii.js.org",
+  "version": "0.0.0",
+  "description": "Um avançado filtro de palavrões.",
+  "dependencies": {},
+  "authors": [
+    "Matheus Alves <theuves@gmail.com>"
+  ],
+  "license": "MIT"
+}

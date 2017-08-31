@@ -3,46 +3,37 @@
   padding: 0px;
   box-sizing: border-box;
 }
-
 html {
   font-size: 20px;
 }
-
 body {
   margin: 100px 30px;
   text-align: center;
   font-family: "Raleway";
 }
-
 header h1 {
   font-size: 2.4rem;
   font-family: "Bubbler One";
 }
-
 header h1,
 main h2 {
   margin-bottom: 0.5rem;
 }
-
 header h1 .js {
   color: #27ae60;
 }
-
 header p {
   color: gray;
   font-style: italic;
 }
-
 pre {
   color: #333;
   text-align: center;
   font-weight: bold;
 }
-
 nav {
   margin: 20px 0px 30px 0px;
 }
-
 nav a {
   color: #eee;
   background-color: #34495e;
@@ -53,24 +44,22 @@ nav a {
   border-radius: 3px;
   display: inline-block;
 }
-
 nav a:hover {
   background-color: #485b6e;
-  border-color: #415161;
 }
-
+nav a:active {
+  background-color: #34495e;
+}
 @media screen and (max-width: 800px) {
   body {
     margin: 75px 30px;
   }
 }
-
 @media screen and (max-width: 600px) {
   html {
     font-size: 16px;
   }
 }
-
 ::selection {
   color: white;
   background-color: #2980b9;
