@@ -2,7 +2,10 @@
   "name": "piii.js.org",
   "version": "0.0.0",
   "description": "Um avançado filtro de palavrões.",
-  "dependencies": {},
+  "devDependencies": {
+    "jquery": "~3.2.1",
+    "select": "~1.1.2"
+  },
   "authors": [
     "Matheus Alves <theuves@gmail.com>"
   ],
