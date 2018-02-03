@@ -2,30 +2,27 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Piii.js ― Um avançado filtro de palavrões.</title>
+    <title>Piii.js</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bubbler+One|Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/select/dist/select.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <h1>Piii<span class="js">.js</span></h1>
-      <p>Um avançado filtro de palavrões.</p>
+      <h1 class="title">Piii<span class="green">.js</span></h1>
+      <p class="description">Um avançado filtro de palavrões.</p>
     </header>
     <nav>
-      <a href="https://github.com/theuves/piii.js#readme">
-        <span class="octicon octicon-book"></span> Ver a Documentação
+      <a class="button" href="https://github.com/theuves/piii.js#readme">
+        <span class="octicon octicon-book"></span> Veja a documentação
       </a>
-      <a class="download" href="#">
-        <span class="octicon octicon-cloud-download"></span> Baixar <span class="version"></span>
+      <a id="download" class="button" href="#">
+        <span class="octicon octicon-cloud-download"></span> Baixe v<span id="version"></span>
       </a>
     </nav>
     <main>
-      <pre><code>npm install --save piii</code></pre>
+      <pre class="npm"><code>npm install --save piii</code></pre>
     </main>
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,16 @@
+{
+  "name": "piii.js.org",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Site do Piii.js.org.",
+  "homepage": "https://piii.js.org",
+  "scripts": {
+    "start": "serve"
+  },
+  "devDependencies": {
+    "serve": "^6.4.9"
+  },
+  "repository": "theuves/piii.js.org",
+  "author": "Matheus Alves",
+  "license": "MIT"
+}
