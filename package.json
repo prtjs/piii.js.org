@@ -1,8 +1,8 @@
 {
   "name": "piii.js.org",
   "version": "1.0.0",
-  "private": false,
-  "description": "Site do Piii.js.org.",
+  "private": true,
+  "description": "Site do Piii.js.",
   "homepage": "https://piii.js.org",
   "scripts": {
     "start": "serve"
