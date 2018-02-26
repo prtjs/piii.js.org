@@ -4,13 +4,10 @@
   "private": true,
   "description": "Site do Piii.js.",
   "homepage": "https://piii.js.org",
-  "scripts": {
-    "start": "serve"
-  },
-  "devDependencies": {
-    "serve": "^6.4.9"
-  },
   "repository": "theuves/piii.js.org",
   "author": "Matheus Alves",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.6.2"
+  }
 }
