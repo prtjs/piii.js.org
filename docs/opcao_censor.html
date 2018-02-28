@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Opção censor</title>
+    <link rel="stylesheet" href="assets/base.css">
+    <link rel="stylesheet" href="assets/layout.css">
+    <link rel="stylesheet" href="assets/hljs-github.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <header class="header">
+      <div class="container flex">
+        <h1 class="title flex-auto">
+          <a href="javascript:void(0);">Piii.js</a>
+        </h1>
+        <a class="item" href="https://github.com/piiijs/piii.js">
+          <i class="fa fa-github"></i> GITHUB
+        </a>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container flex">
+        <aside class="aside">
+          <div>
+            <ul>
+              <li><a href="Instalacao.html">Instalação</a></li>
+              <li><a href="usando.html">Usando</a></li>
+            </ul>
+            <p>CONFIGURAÇÕES:</p>
+            <ul>
+              <li><a href="opcao_filters.html"><code>filters</code></a></li>
+              <li><a href="opcao_aliases.html"><code>aliases</code></a></li>
+              <li><a href="opcao_repeated.html"><code>repeated</code></a></li>
+              <li><a href="opcao_censor.html"><code>censor</code></a></li>
+              <li><a href="opcao_cleaner.html"><code>cleaner</code></a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <article class="article flex-auto"><h1 id="opção-censor"><a class="header-link" href="#opção-censor"></a>Opção censor</h1>
+<blockquote>
+<p>Valor que substituirá os palavrões dentro da <em>string</em>.</p>
+</blockquote>
+<ul class="list">
+<li>Tipo: <em>String</em> ou <em>Function</em>.</li>
+<li>Valor padrão: <code>&quot;*&quot;</code>.</li>
+</ul>
+<p>Isso deve informar uma <em>string</em> que substituirá todos os palavrões filtrados ou uma função que receberá o palavrão que está sendo filtrado e que deve retornar uma <em>string</em> para substituí-lo.</p>
+<h2 id="exemplo-de-censura"><a class="header-link" href="#exemplo-de-censura"></a>Exemplo de censura</h2>
+<p>Veja um exemplo manipulando o palavrão antes de filtrá-lo.</p>
+<pre class="hljs"><code><span class="hljs-keyword">const</span> Piii = <span class="hljs-built_in">require</span>(<span class="hljs-string">"piii"</span>);
+<span class="hljs-keyword">const</span> piiiFilters = <span class="hljs-built_in">require</span>(<span class="hljs-string">"piii-filters"</span>);
+
+<span class="hljs-keyword">const</span> piii = <span class="hljs-keyword">new</span> Piii({
+  <span class="hljs-attr">filters</span>: [
+    piiiFilters.foder
+  ],
+  <span class="hljs-attr">censor</span>: <span class="hljs-function"><span class="hljs-params">badWord</span> =&gt;</span> {
+    <span class="hljs-keyword">return</span> badWord.charAt(<span class="hljs-number">0</span>) + <span class="hljs-string">"*"</span>.repeat(badWord.length - <span class="hljs-number">1</span>)
+  }
+});
+
+piii.filter(<span class="hljs-string">"Vá se foder!"</span>) <span class="hljs-comment">// "Vá se f****!";</span></code></pre>        </article>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        var pathname = window.location.pathname.substr(1);
+        var activeLink = document.querySelector("[href='" + pathname + "']");
+
+        if (activeLink) activeLink.classList.add("active");
+      })();
+    </script>
+  </body>
+</html>

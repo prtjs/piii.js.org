@@ -3,22 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "description": "Site do Piii.js.",
-  "scripts": {
-    "test": "echo OK! && exit 0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/theuves/piii.js.org.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/theuves/piii.js.org/issues"
-  },
-  "homepage": "https://github.com/theuves/piii.js.org#readme",
   "devDependencies": {
     "markdown-styles": "^3.1.10"
   },
-  "dependencies": {}
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "author": "Matheus Alves",
+  "license": "MIT"
 }

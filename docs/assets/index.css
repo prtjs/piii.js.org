@@ -1,0 +1,33 @@
+body {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 58px;
+}
+.subtitle {
+  color: gray;
+  font-style: italic;
+}
+
+.button {
+  display: inline-block;
+  margin: 0 3px 0 3px;
+  padding: 12px 42px;
+  border-radius: 3px;
+  font-size: 24px;
+  text-decoration: none;
+  background-color: var(--page-color);
+  color: white;
+}
+.button:hover {
+  opacity: 0.95;
+}
+.button:active {
+  opacity: 1;
+}
