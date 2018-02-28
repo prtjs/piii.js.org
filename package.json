@@ -1,13 +1,10 @@
 {
   "name": "piii.js.org",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "private": true,
+  "version": "0.0.0",
+  "description": "Site do Piii.js.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo OK! && exit 0"
   },
   "repository": {
     "type": "git",
