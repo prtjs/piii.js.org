@@ -7,7 +7,7 @@
     "markdown-styles": "^3.1.10"
   },
   "scripts": {
-    "build": "./build.sh"
+    "build": "bash build.sh"
   },
   "author": "Matheus Alves",
   "license": "MIT"
