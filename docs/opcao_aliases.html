@@ -66,9 +66,9 @@
   }
 });
 
-piii.filter(<span class="hljs-string">"foo boceta bar"</span>) <span class="hljs-comment">// "foo * bar";</span>
-piii.filter(<span class="hljs-string">"foo b0c3t4 bar"</span>) <span class="hljs-comment">// "foo * bar";</span>
-piii.filter(<span class="hljs-string">"foo boc&amp;ta bar"</span>) <span class="hljs-comment">// "foo * bar";</span></code></pre>        </article>
+piii.filter(<span class="hljs-string">"foo boceta bar"</span>); <span class="hljs-comment">// "foo * bar";</span>
+piii.filter(<span class="hljs-string">"foo b0c3t4 bar"</span>); <span class="hljs-comment">// "foo * bar";</span>
+piii.filter(<span class="hljs-string">"foo boc&amp;ta bar"</span>); <span class="hljs-comment">// "foo * bar";</span></code></pre>        </article>
       </div>
     </section>
 
@@ -77,7 +77,10 @@ piii.filter(<span class="hljs-string">"foo boc&amp;ta bar"</span>) <span class="
         var pathname = window.location.pathname.substr(1);
         var activeLink = document.querySelector("[href='" + pathname + "']");
 
-        if (activeLink) activeLink.classList.add("active");
+        if (activeLink) {
+          activeLink.href = "javascript:void(0);";
+          activeLink.classList.add("active");
+        }
       })();
     </script>
   </body>

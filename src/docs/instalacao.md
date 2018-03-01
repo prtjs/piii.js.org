@@ -12,6 +12,10 @@ Ou com *bower*:
 bower install --save piii.js
 ```
 
-Ou importe-o de *UNPKG.com*
+Ou importe-o de [*unpkg.com*](https://unpkg.com):
+
+```html
+<script src="https://unpkg.com/piii"></script>
+```
 
 Ou baixe-o [aqui](https://git.io/vNx9H).

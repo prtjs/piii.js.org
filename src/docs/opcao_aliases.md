@@ -28,7 +28,7 @@ const piii = new Piii({
   }
 });
 
-piii.filter("foo boceta bar") // "foo * bar";
-piii.filter("foo b0c3t4 bar") // "foo * bar";
-piii.filter("foo boc&ta bar") // "foo * bar";
+piii.filter("foo boceta bar"); // "foo * bar";
+piii.filter("foo b0c3t4 bar"); // "foo * bar";
+piii.filter("foo boc&ta bar"); // "foo * bar";
 ```

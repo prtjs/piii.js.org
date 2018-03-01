@@ -51,7 +51,10 @@
         var pathname = window.location.pathname.substr(1);
         var activeLink = document.querySelector("[href='" + pathname + "']");
 
-        if (activeLink) activeLink.classList.add("active");
+        if (activeLink) {
+          activeLink.href = "javascript:void(0);";
+          activeLink.classList.add("active");
+        }
       })();
     </script>
   </body>

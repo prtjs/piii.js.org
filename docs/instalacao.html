@@ -43,8 +43,8 @@
         <article class="article flex-auto"><h1 id="instalação"><a class="header-link" href="#instalação"></a>Instalação</h1>
 <p>Instale-o com <em>npm</em>:</p>
 <pre class="hljs"><code>npm install --save piii</code></pre><p>Ou com <em>bower</em>:</p>
-<pre class="hljs"><code>bower install --save piii.js</code></pre><p>Ou importe-o de <em>UNPKG.com</em></p>
-<p>Ou baixe-o <a href="https://git.io/vNx9H">aqui</a>.</p>
+<pre class="hljs"><code>bower install --save piii.js</code></pre><p>Ou importe-o de <a href="https://unpkg.com"><em>unpkg.com</em></a>:</p>
+<pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/piii"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre><p>Ou baixe-o <a href="https://git.io/vNx9H">aqui</a>.</p>
         </article>
       </div>
     </section>
@@ -54,7 +54,10 @@
         var pathname = window.location.pathname.substr(1);
         var activeLink = document.querySelector("[href='" + pathname + "']");
 
-        if (activeLink) activeLink.classList.add("active");
+        if (activeLink) {
+          activeLink.href = "javascript:void(0);";
+          activeLink.classList.add("active");
+        }
       })();
     </script>
   </body>

@@ -113,7 +113,7 @@ piii.filter(<span class="hljs-string">"Que merdão!"</span>); <span class="hljs-
 <p>Você também pode importar filtros de terceiros para usar. Você pode pesquisar no <em>GitHub</em> por <a href="https://git.io/vNxcW"><code>topic:piii-filter</code></a> para encontrar filtros ― e caso você crie seu próprio filtro e publique-o no <em>GitHub</em> você poderá adicionar <em>piii-filter</em> nos <em>topics</em> do repositório para que ele seja encontrado por outras pessoas.</p>
 <p>Caso queira começar com <em>Piii.js</em> sem ter que fazer muitas configurações você poderá usar o <a href="https://ghub.io/piii-filters"><code>piii-filters</code></a> que já vem com alguns filtros dos palavrões mais usados na língua portuguesa (e visto como de baixo-calão por quase todos).</p>
 <p>Você pode instalá-lo com:</p>
-<pre class="hljs"><code>npm install --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span> piii-filters</code></pre><p>E usá-lo com:</p>
+<pre class="hljs"><code>npm install --save-dev piii-filters</code></pre><p>E usá-lo com:</p>
 <pre class="hljs"><code><span class="hljs-keyword">const</span> Piii = <span class="hljs-built_in">require</span>(<span class="hljs-string">"piii"</span>);
 <span class="hljs-keyword">const</span> piiiFilters = <span class="hljs-built_in">require</span>(<span class="hljs-string">"piii-filters"</span>);
 
@@ -132,7 +132,10 @@ piii.filter(<span class="hljs-string">"Vá se foder!"</span>); <span class="hljs
         var pathname = window.location.pathname.substr(1);
         var activeLink = document.querySelector("[href='" + pathname + "']");
 
-        if (activeLink) activeLink.classList.add("active");
+        if (activeLink) {
+          activeLink.href = "javascript:void(0);";
+          activeLink.classList.add("active");
+        }
       })();
     </script>
   </body>

@@ -99,7 +99,7 @@ Caso queira começar com *Piii.js* sem ter que fazer muitas configurações voc�
 
 Você pode instalá-lo com:
 
-```
+```bash
 npm install --save-dev piii-filters
 ```
 
