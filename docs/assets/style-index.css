@@ -1,14 +1,4 @@
 /**
- * container
- */
-.container {
-  --w: 950px;
-  width: var(--w);
-  max-width: var(--w);
-  margin: 0 auto;
-}
-
-/**
  * row
  */
 .row {

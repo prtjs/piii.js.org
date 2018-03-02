@@ -41,16 +41,6 @@
 }
 
 /**
- * container
- */
-.container {
-  --w: 900px;
-  width: var(--w);
-  max-width: var(--w);
-  margin: 0 auto;
-}
-
-/**
  * section
  */
 .section {
