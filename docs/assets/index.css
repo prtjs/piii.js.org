@@ -1,33 +1,147 @@
-body {
-  margin-top: 100px;
-  text-align: center;
+/**
+ * container
+ */
+.container {
+  --w: 950px;
+  width: var(--w);
+  max-width: var(--w);
+  margin: 0 auto;
 }
 
-.header {
-  margin-bottom: 30px;
+/**
+ * row
+ */
+.row {
+  display: flex;
+}
+.column {
+  flex: 1;
 }
 
+/**
+ * content
+ */
+.content {
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+.content a {
+  color: var(--page-color);
+}
+.content p {
+  margin-bottom: 10px;
+}
+.content pre {
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  background-color: #eee;
+  color: #333;
+}
+
+/**
+ * titles
+ */
 .title {
-  font-size: 58px;
-}
-.subtitle {
-  color: gray;
+  display: inline-block;
+  margin-bottom: 60px;
+  font-size: 2.25em;
+  font-weight: bold;
   font-style: italic;
+  color: #333;
+}
+.title:after {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: var(--page-color);
 }
 
+/**
+ * header
+ */
+.header {
+  margin-bottom: 80px;
+  padding: 60px 0;
+  text-align: center;
+  background-color: var(--page-color);
+}
+.header h1 {
+  font-size: 58px;
+  color: white;
+}
+.header h2 {
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #ddd;
+}
 .button {
   display: inline-block;
   margin: 0 3px 0 3px;
   padding: 12px 42px;
-  border-radius: 3px;
   font-size: 24px;
   text-decoration: none;
-  background-color: var(--page-color);
-  color: white;
+  background-color: white;
+  color: #111;
 }
 .button:hover {
   opacity: 0.95;
 }
 .button:active {
   opacity: 1;
+}
+
+/**
+ * features
+ */
+#features {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.items {
+  display: flex;
+}
+.items:first-child {
+  margin-top: calc(64px / 2 - 10px)
+}
+.items:not(:last-child) {
+  margin-bottom: calc(64px / 2);
+}
+.item {
+  flex: 1;
+  padding: 0 40px;
+  margin: 10px;
+  height: 170px;
+  border: solid 1px #bbb;
+  text-align: center;
+  background-color: #eee;
+}
+.item .emoji {
+  margin-top: calc(-64px / 2);
+  margin-bottom: 15px;
+}
+.item .text {
+  margin-bottom: 30px;
+  font-size: 1.4em;
+  font-style: italic;
+  color: #444;
+}
+
+/**
+ * primeiros passos
+ */
+#getting_started {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/**
+ * footer
+ */
+#footer {
+  padding: 60px 0 90px 0;
+  text-align: center;
+  font-size: 18px;
+  background-color: var(--page-color);
+  color: white;
 }
