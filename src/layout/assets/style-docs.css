@@ -127,6 +127,10 @@
   color: darkred;
   background-color: #eee;
 }
+.article code a {
+  color: var(--page-color);
+}
+
 .article h1 code,
 .article h2 code,
 .article h3 code,
