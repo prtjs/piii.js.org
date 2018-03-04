@@ -90,6 +90,10 @@
 /**
  * article
  */
+.article {
+  max-width: calc(950px - (240px + 30px));
+}
 .article pre {
   padding: 15px 20px;
+  overflow-x: auto;
 }
