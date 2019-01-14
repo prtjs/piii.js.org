@@ -23,7 +23,6 @@ const ImgLogo = () => (
 const StyledContainer = styled.header`
   padding: 50px 0;
   text-align: center;
-  font-family: 'Segoe UI', Verdana, Arial, sans-serif;
   background-image: linear-gradient(to top, #a2b6d9, #e9ecc4);
 `
 
