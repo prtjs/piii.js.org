@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import Features from '../components/Features'
 import Installation from '../components/Installation'
+import Footer from '../components/Footer'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -19,5 +20,6 @@ export default () => (
     <Navbar />
     <Features />
     <Installation />
+    <Footer />
   </Fragment>
 )

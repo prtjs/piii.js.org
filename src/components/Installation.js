@@ -26,7 +26,7 @@ const ImgScreenshot = ({ style }) => (
 )
 
 const StyledSection = styled.section`
-  margin-bottom: 300px;
+  margin-bottom: 320px;
   padding: 80px 0;
   text-align: center;
   background-color: #eee;
@@ -38,7 +38,7 @@ const StyledContainer = styled.div`
 `
 
 const StyledTitle = styled.h1`
-  margin: 0 0 20px 0;
+  margin: 0 0 30px 0;
   font-size: 2.5em;
 `
 
@@ -49,7 +49,7 @@ const StyledCommand = styled.code`
   padding: 10px 30px;
   border-radius: 3px;
   font-family: 'Dank Mono', 'Fira Code', Consolas, monospace;
-  font-size: 1.3em;
+  font-size: 1.5em;
   background-color: black;
   color: white;
 `
