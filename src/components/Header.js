@@ -21,20 +21,21 @@ const ImgLogo = () => (
 )
 
 const StyledContainer = styled.header`
-  padding: 50px 0;
+  padding: 80px 0;
   text-align: center;
   background-image: linear-gradient(to top, #a2b6d9, #e9ecc4);
 `
 
 const StyledTitle = styled.h1`
-  margin: 0;
-  font-size: 3em;
+  margin: 5px 0;
+  font-size: 3.5em;
 `
 
 const StyledDescription = styled.p`
   margin: 0 auto;
-  width: 300px;
-  font-size: 1.25em;
+  width: 400px;
+  font-size: 1.5em;
+  line-height: 150%;
   color: #666;
 `
 

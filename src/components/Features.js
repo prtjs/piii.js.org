@@ -71,8 +71,8 @@ const ImgEmoji = ({ emoji, style }) => (
 
 const StyledGrid = styled.div`
   display: grid;
-  margin: 0 auto 80px auto;
-  width: 800px;
+  margin: 0 auto 120px auto;
+  width: 750px;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 25px;
 `

@@ -17,8 +17,8 @@ const links = [
 ]
 
 const StyledContainer = styled.nav`
-  margin-bottom: 80px;
-  padding: 15px 0;
+  margin-bottom: 120px;
+  padding: 20px 0;
   background-color: black;
 `
 
@@ -35,7 +35,7 @@ const StyledMenuItem = styled.li`
 `
 
 const StyledLink = styled.a`
-  font-size: 1.25em;
+  font-size: 1.5em;
   text-decoration: none;
   color: white;
 `

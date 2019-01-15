@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import Features from '../components/Features'
+import Installation from '../components/Installation'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -17,5 +18,6 @@ export default () => (
     <Header />
     <Navbar />
     <Features />
+    <Installation />
   </Fragment>
 )
