@@ -12,7 +12,7 @@ const links = [
   },
   {
     title: 'Download',
-    utl: 'https://github.com/piiijs/piii.js/archive/master.zip'
+    url: 'https://github.com/piiijs/piii.js/archive/master.zip'
   },
 ]
 
