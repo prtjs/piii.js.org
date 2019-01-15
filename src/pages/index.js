@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import Header from '../components/Header'
 import Navbar from '../components/Navbar'
+import Features from '../components/Features'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -15,5 +16,6 @@ export default () => (
     <GlobalStyle />
     <Header />
     <Navbar />
+    <Features />
   </Fragment>
 )
