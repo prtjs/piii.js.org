@@ -17,7 +17,7 @@ const links = [
 ]
 
 const StyledContainer = styled.nav`
-  margin-bottom: 70px;
+  margin-bottom: 80px;
   padding: 15px 0;
   background-color: black;
 `

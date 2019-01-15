@@ -71,10 +71,10 @@ const ImgEmoji = ({ emoji, style }) => (
 
 const StyledGrid = styled.div`
   display: grid;
-  margin: 0 auto;
+  margin: 0 auto 80px auto;
   width: 800px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 25px;
 `
 
 const StyledGridItem = styled.div`
