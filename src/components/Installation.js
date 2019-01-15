@@ -61,7 +61,7 @@ const Installation = () => (
         Instalação
       </StyledTitle>
       <StyledCommand>
-        npm install --save-dev piii
+        npm install --save piii
       </StyledCommand>
       <ImgScreenshot style={{ marginBottom: '-40%' }} />
     </StyledContainer>
