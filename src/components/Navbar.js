@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 
 const links = [
   {
@@ -18,6 +17,7 @@ const links = [
 ]
 
 const StyledContainer = styled.nav`
+  margin-bottom: 70px;
   padding: 15px 0;
   background-color: black;
 `
@@ -34,7 +34,7 @@ const StyledMenuItem = styled.li`
   display: inline-block;
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   font-size: 1.25em;
   text-decoration: none;
   color: white;
@@ -45,7 +45,7 @@ const Navbar = () => (
     <StyledMenu>
     {links.map((link, index) => (
       <StyledMenuItem key={index}>
-        <StyledLink to={link.url}>
+        <StyledLink href={link.url}>
           {link.title}
         </StyledLink>
       </StyledMenuItem>
