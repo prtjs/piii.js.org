@@ -39,7 +39,7 @@ const StyledContainer = styled.div`
 
 const StyledTitle = styled.h1`
   margin: 0 0 20px 0;
-  font-size: 3em;
+  font-size: 2.5em;
 `
 
 const StyledCommand = styled.code`
@@ -49,7 +49,7 @@ const StyledCommand = styled.code`
   padding: 10px 30px;
   border-radius: 3px;
   font-family: 'Dank Mono', 'Fira Code', Consolas, monospace;
-  font-size: 1.5em;
+  font-size: 1.3em;
   background-color: black;
   color: white;
 `
