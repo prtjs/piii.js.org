@@ -63,7 +63,10 @@ const Installation = () => (
       <StyledCommand>
         npm install --save piii
       </StyledCommand>
-      <ImgScreenshot style={{ marginBottom: '-40%' }} />
+      <ImgScreenshot style={{
+        marginBottom: '-40%',
+        boxShadow: '0 0 10px 0 grey',
+      }} />
     </StyledContainer>
   </StyledSection>
 )
