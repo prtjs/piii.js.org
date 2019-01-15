@@ -10,7 +10,7 @@ const features = [
   },
   {
     emoji: 'wine_glass',
-    description: 'Ignorar uso de acentuaçòes.',
+    description: 'Ignorar uso de acentuações.',
   },
   {
     emoji: 'nail_care',
