@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { createGlobalStyle } from 'styled-components'
 import logo from '../images/logo.png'
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     font-family: 'Segoe UI', Verdana, Arial, sans-serif;
