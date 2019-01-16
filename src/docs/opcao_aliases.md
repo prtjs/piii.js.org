@@ -1,4 +1,7 @@
-# Opção aliases
+---
+path: "/docs/options/aliases"
+title: "Opção aliases"
+---
 
 > Alfabeto alternativo para alguns caracteres.
 

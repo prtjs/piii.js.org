@@ -1,4 +1,7 @@
-# Usando
+---
+path: "/docs/usando"
+title: "Usando"
+---
 
 ```js
 const Piii = require("piii");

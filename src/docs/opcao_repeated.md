@@ -1,4 +1,7 @@
-# Opção repeated
+---
+path: "/docs/options/repeated"
+title: "Opção repeated"
+---
 
 > Informa se deve ignorar letras repetidas.
 

@@ -1,4 +1,7 @@
-# Opção cleaner
+---
+path: "/docs/options/cleaner"
+title: "Opção cleaner"
+---
 
 > Removedor de acentos.
 

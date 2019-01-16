@@ -1,4 +1,7 @@
-# Opção censor
+---
+path: "/docs/options/censor"
+title: "Opção censor"
+---
 
 > Valor que substituirá os palavrões dentro da *string*.
 

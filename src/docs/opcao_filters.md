@@ -1,4 +1,7 @@
-# Opção filters
+---
+path: "/docs/options/filters"
+title: "Opção filters"
+---
 
 > Lista de filtros.
 

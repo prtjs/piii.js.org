@@ -1,4 +1,7 @@
-# Instalação
+---
+path: "/docs/instalacao"
+title: "Instalação"
+---
 
 Instale-o com *npm*:
 
