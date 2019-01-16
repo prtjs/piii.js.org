@@ -1,6 +1,15 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import { createGlobalStyle } from 'styled-components'
+import logo from '../images/logo.png'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+  }
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -32,7 +41,9 @@ const Layout = ({ children }) => (
           <meta name="twitter:title" content={data.site.siteMetadata.title} />
           <meta name="twitter:description" content={data.site.siteMetadata.title} />
           <link rel="canonical" href="https://piii.js.org/" />
+          <link rel="favicon" href={logo} />
         </Helmet>
+        <GlobalStyles>
         {children}
       </Fragment>
     )}
