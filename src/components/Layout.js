@@ -43,7 +43,7 @@ const Layout = ({ children }) => (
           <link rel="canonical" href="https://piii.js.org/" />
           <link rel="favicon" href={logo} />
         </Helmet>
-        <GlobalStyles>
+        <GlobalStyles />
         {children}
       </Fragment>
     )}
