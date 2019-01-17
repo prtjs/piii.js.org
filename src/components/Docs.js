@@ -61,7 +61,7 @@ const Docs = ({
 }) => (
   <Layout>
     <StyledHeader>
-      <img src={logo} width='30' />
+      <img alt="Logo" src={logo} width='30' />
       <h1>Piii.js</h1>
     </StyledHeader>
     <Navbar
