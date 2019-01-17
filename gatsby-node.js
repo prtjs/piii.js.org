@@ -6,10 +6,10 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark (sort: { fields: fileAbsolutePath }) {
         edges {
           node {
-            html,
+            html
             frontmatter {
               path
               title
