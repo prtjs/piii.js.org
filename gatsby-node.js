@@ -23,13 +23,17 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const { edges } = result.data.allMarkdownRemark
+    const links = edges.map((edge) => edge.node.frontmatter) 
+
+    edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {
           html: node.html,
           title: node.frontmatter.title,
+          links
         },
       })
     })
