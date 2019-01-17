@@ -7,7 +7,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\""
+    "format": "prettier --write \"src/**/*.js\"",
+    "deploy": "cp CNAME ./public && gh-pages -d ./public"
   },
   "dependencies": {
     "gatsby": "^2.0.76",
