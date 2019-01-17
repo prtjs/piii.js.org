@@ -8,7 +8,7 @@ const links = [
   },
   {
     title: 'Documentação',
-    url: 'https://github.com/piiijs/piii.js#readme',
+    url: 'https://piii.js.org/docs/instalacao',
   },
   {
     title: 'Download',
@@ -17,8 +17,8 @@ const links = [
 ]
 
 const StyledContainer = styled.nav`
-  margin-bottom: 120px;
-  padding: 20px 0;
+  margin-bottom: ${props => props.marginBottom || '120'}px;
+  padding: ${props => props.paddingY || '20'}px 0;
   background-color: black;
 `
 
@@ -35,17 +35,27 @@ const StyledMenuItem = styled.li`
 `
 
 const StyledLink = styled.a`
-  font-size: 1.5em;
+  font-size: ${props => props.fontSize || '1.5'}em;
   text-decoration: none;
   color: white;
 `
 
-const Navbar = () => (
-  <StyledContainer>
+const Navbar = ({
+  marginBottom,
+  fontSize,
+  paddingY
+}) => (
+  <StyledContainer
+    marginBottom={marginBottom}
+    paddingY={paddingY}
+  >
     <StyledMenu>
     {links.map((link, index) => (
       <StyledMenuItem key={index}>
-        <StyledLink href={link.url}>
+        <StyledLink
+          fontSize={fontSize}
+          href={link.url}
+        >
           {link.title}
         </StyledLink>
       </StyledMenuItem>
