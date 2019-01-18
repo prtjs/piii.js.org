@@ -2,6 +2,8 @@
 
 > Site do Piiijs.org.
 
+Edite a documentação em: [`./src/docs`](./src/docs).
+
 ## Desenvolvimento
 
 ```
