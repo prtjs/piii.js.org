@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Components
-import Container from './Container'
+import Container from './styled/Container'
 
 // Images
 import imgLogo from '../images/logo.svg'

@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-// Components
-import Container from './Container'
+// Public styled components
+import Container from './styled/Container'
+import Link from './styled/Link'
 
 // Styles
 const StyledHeader = styled.header`
@@ -15,28 +16,16 @@ const StyledContainer = styled(Container)`
   align-items: center;
   justify-content: space-between;
 `
-const StyledTitle = styled.h1`
+const Brand = styled.h1`
   margin: 0;
   font-size: 2.25em;
 `
-const StyledLink = styled.a`
-  font-family: 'Open Sans Condensed', Helvetica, Verdana, Arial, sans-serif;
-  text-decoration: none;
-  color: white;
-
-  &:hover {
-    opacity: .8;
-  }
-  &:active {
-    opacity: .9;
-  }
-`
-const StyledList = styled.ul`
+const List = styled.ul`
   display: flex;
   padding: 0;
   list-style-type: none;
 `
-const StyledItem = styled.li`
+const Item = styled.li`
   font-size: 1.15em;
 
   &:not(:last-child) {
@@ -47,17 +36,20 @@ const StyledItem = styled.li`
 const Header = () => (
   <StyledHeader>
     <StyledContainer>
-      <StyledTitle>
-        <StyledLink href='#'>Piii.js</StyledLink>
-      </StyledTitle>
-      <StyledList>
-        <StyledItem>
-          <StyledLink href='#'>Documentação</StyledLink>
-        </StyledItem>
-        <StyledItem>
-          <StyledLink href='#'>Código-fonte</StyledLink>
-        </StyledItem>
-      </StyledList>
+
+      <Brand>
+        <Link href='#'>Piii.js</Link>
+      </Brand>
+
+      <List>
+        <Item>
+          <Link href='#'>Documentação</Link>
+        </Item>
+        <Item>
+          <Link href='#'>Código-fonte</Link>
+        </Item>
+      </List>
+
     </StyledContainer>
   </StyledHeader>
 )
