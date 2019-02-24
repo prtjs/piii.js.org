@@ -2,13 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Components
-import Container from './styled/Container'
+import Container from '../styled/Container'
 
 // Images
-import imgLogo from '../images/logo.svg'
+import imgUrlLogo from '../../images/logo.svg'
+import imgUrlEffect from '../../images/effect.svg'
 
 // Styles
-const StyledHome = styled.div`
+const Section = styled.section`
   position: relative;
   padding: 50px 0 100px 0;
   background-color: #303952;
@@ -17,18 +18,28 @@ const StyledContainer = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 75px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(${imgUrlEffect})
+  }
 `
-const StyledSvg = styled.svg`
-  position: absolute;
-  width: 100%;
-  height: 50px;
-  bottom: 0;
-`
-const StyledImg = styled.img`
-  width: 500px;
+const WomanBg = styled.div`
+  --w: 500px;
+  --h: calc(var(--w) * 264.4 / 399.991);
+  width: var(--w);
+  height: var(--h);
   opacity: .6;
+  background-size: 100% 100%;
+  background-image: url(${imgUrlLogo});
 `
-const StyledContent = styled.article`
+const Content = styled.article`
   flex: auto;
   text-align: center;
   font-family: 'Open Sans Condensed', Arial, sans-serif;
@@ -50,7 +61,7 @@ const StyledContent = styled.article`
     opacity: .8;
   }
 `
-const StyledBtn = styled.a`
+const Btn = styled.a`
   display: inline-block;
   padding: 15px 25px; 
   font-family: Helvetica, Verdana, Arial, sans-serif;
@@ -70,32 +81,21 @@ const StyledBtn = styled.a`
 `
 
 const Home = () => (
-  <StyledHome>
+  <Section>
     <StyledContainer>
-      <div>
-        <StyledImg src={imgLogo} />
-      </div>
-      <StyledContent>
+
+      <WomanBg />
+
+      <Content>
         <h1>Piii.js</h1>
         <h2>Um avançado filtro de palavrões.</h2>
-        <StyledBtn href='#'>
+        <Btn href='#'>
           Documentação
-        </StyledBtn>
-      </StyledContent>
-    </StyledContainer>
+        </Btn>
+      </Content>
 
-    {/* Efeito no final. */}
-    <StyledSvg
-      xmlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 100 100'
-      preserveAspectRatio='none'
-    >
-      <polygon
-        fill='white'
-        points='0,100 100,0 100,100'
-      />
-    </StyledSvg>
-  </StyledHome>
+    </StyledContainer>
+  </Section>
 )
 
 export default Home

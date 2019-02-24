@@ -1,9 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Home from '../components/Home'
+
+// Home components
+import Apresentation from '../components/Home/Apresentation'
+import Examples from '../components/Home/Examples'
 
 export default () => (
   <Layout>
-    <Home />
+    <Apresentation />
+    <Examples />
   </Layout>
 )
