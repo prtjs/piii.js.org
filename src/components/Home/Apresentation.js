@@ -11,7 +11,7 @@ import imgUrlEffect from '../../images/effect.svg'
 // Styles
 const Section = styled.section`
   position: relative;
-  padding: 50px 0 100px 0;
+  padding: 75px 0 125px 0;
   background-color: #303952;
 `
 const StyledContainer = styled(Container)`
@@ -22,7 +22,7 @@ const StyledContainer = styled(Container)`
   &:after {
     content: '';
     width: 100%;
-    height: 75px;
+    height: 50px;
     display: block;
     position: absolute;
     bottom: 0;
