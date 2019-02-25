@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import Container from '../styled/Container'
 
+import CodePen from '../CodePen'
+
 // Styles
 const Section = styled.section`
   margin-bottom: 75px;
@@ -15,29 +17,6 @@ const Title = styled.h1`
   line-height: 150%;
 `
 
-// Others components
-const CodePen = () => (
-  <iframe
-    height='600'
-    style={{ width: '100%' }}
-    scrolling='no'
-    title='Chat sem Palavrões (Piii.js)'
-    src='//codepen.io/theuves/embed/YBmPoM/?height=600&theme-id=12945&default-tab=js,result'
-    frameBorder='no'
-  >
-    See the Pen
-    <a href='https://codepen.io/theuves/pen/YBmPoM/'>
-      Chat sem Palavrões (Piii.js)
-    </a>
-    by Matheus Alves
-    (<a href='https://codepen.io/theuves'>@theuves</a>)
-    on
-    <a href='https://codepen.io'>
-      CodePen
-    </a>.
-  </iframe>
-)
-
 const Examples = () => (
   <Section>
     <Container>
@@ -47,7 +26,12 @@ const Examples = () => (
         Então o Piii.js pode lhe ajudar.
       </Title>
 
-      <CodePen />
+      <CodePen
+        penId='YBmPoM'
+        penUser='theuves'
+        penHeight={600}
+        penTitle='Chat sem Palavrões (Piii.js)'
+      />
     </Container>
   </Section>
 )
