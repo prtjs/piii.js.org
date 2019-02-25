@@ -13,6 +13,10 @@ const Section = styled.section`
   position: relative;
   padding: 75px 0 125px 0;
   background-color: #303952;
+
+  @media (max-width: 620px) {
+    padding: 50px 0 100px 0;
+  }
 `
 const StyledContainer = styled(Container)`
   display: flex;
@@ -28,6 +32,12 @@ const StyledContainer = styled(Container)`
     bottom: 0;
     left: 0;
     background-image: url(${imgUrlEffect})
+
+  }
+  @media (max-width: 620px) {
+    &::after {
+      height: 25px;
+    }
   }
 `
 const WomanBg = styled.div`
@@ -38,24 +48,32 @@ const WomanBg = styled.div`
   opacity: .6;
   background-size: 100% 100%;
   background-image: url(${imgUrlLogo});
+
+  @media (max-width: 620px) {
+    display: none;
+  }
 `
 const Content = styled.article`
   flex: auto;
   text-align: center;
+  font-size: 16px;
   font-family: 'Open Sans Condensed', Arial, sans-serif;
   color: white;
-  font-size: 20px;
+
+  @media (max-width: 620px) {
+    font-size: 14px;
+  }
 
   h1,
   h2 {
     margin: 0;
   }
   h1 {
-    font-size: 4em;
+    font-size: 5em;
   }
   h2 {
     margin-bottom: 25px;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: lighter;
     font-style: italic;
     opacity: .8;

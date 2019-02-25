@@ -7,14 +7,21 @@ import CodePen from '../CodePen'
 
 // Styles
 const Section = styled.section`
-  margin-bottom: 75px;
-  padding: 50px 0;  
+  padding: 90px 0;  
   text-align: center;
+
+  @media (max-width: 620px) {
+    padding: 40px 0;
+  }
 `
 const Title = styled.h1`
   font-size: 2.5em;
   margin-bottom: 50px;
   line-height: 150%;
+
+  @media (max-width: 620px) {
+    font-size: 1.5em;
+  }
 `
 
 const Examples = () => (

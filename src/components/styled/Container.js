@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
+  --pad-x: 20px;
   margin: 0 auto;
-  width: 1000px;
+  padding: 0 var(--pad-x);
+  max-width: calc(1000px + var(--pad-x));
 `
 
 export default Container

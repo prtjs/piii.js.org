@@ -20,7 +20,7 @@ const CodePen = ({
 
   url.searchParams.set('height', penHeight)
   url.searchParams.set('theme-id', THEME_ID)
-  url.searchParams.set('default-tab', 'js,result')
+  url.searchParams.set('default-tab', 'result,js')
 
   return (
     <Iframe

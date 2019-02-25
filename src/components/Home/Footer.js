@@ -14,6 +14,10 @@ const SocialLinks = styled.div`
   padding: 100px 0;
   background-color: #eee;
 
+  @media (max-width: 620px) {
+    padding: 35px 0;
+  }
+
   ul {
     text-align: center;
     list-style-type: none;
@@ -42,17 +46,26 @@ const SocialImg = styled.img `
   &:hover {
     filter: grayscale(0%);
   }
+  @media (max-width: 620px) {
+    width: 2.5em;
+    height: 2.5em;
+  }
 `
 const About = styled.div`
   padding: 40px 0;
   font-family: Helvetica, Verdana, Arial, sans-serif;
   text-align: center;
+  font-size: 16px;
   line-height: 160%;
   color: white;
   background-color: black;
 
   p {
     margin: 0;
+  }
+  @media (max-width: 620px) {
+    padding: 30px;
+    font-size: 14px;
   }
 `
 
