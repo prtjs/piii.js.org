@@ -5,18 +5,29 @@ import { Link as GatsbyLink } from 'gatsby'
 
 const List = styled.ul`
   padding: 10px;
+  border-radius: 3px;
   list-style-type: none;
-  background-color: #f5f5f5;
+  box-shadow: 1px 1px 1px 0 #ddd;
+  background-color: #f6f6f6;
 `
 const Item = styled.li`
   padding: .25em 0;
 `
 const Link = styled(GatsbyLink)`
-  padding: .25em .75em;
+  padding: .35em .75em;
   display: block;
+  border-radius: 3px;
   font-family: Helvetica, Arial, sans-serif;
   text-decoration: none;
+  color: black;
   background-color: #eee;
+
+  &:hover {
+    color: gray;
+  }
+  &:active {
+    color: darkred;
+  }
 `
 
 export default ({ links }) => (
