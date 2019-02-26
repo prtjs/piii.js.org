@@ -8,8 +8,6 @@ import imgSocialTwitter from '../../images/social-icons/twitter.svg'
 import imgSocialPaypal from '../../images/social-icons/paypal.svg'
 
 // Styles
-const Section = styled.footer`
-`
 const SocialLinks = styled.div`
   padding: 100px 0;
   background-color: #eee;
@@ -69,8 +67,8 @@ const About = styled.div`
   }
 `
 
-const Footer = () => (
-  <Section>
+export default () => (
+  <footer>
     <SocialLinks>
       <ul>
         <li>
@@ -99,7 +97,5 @@ const Footer = () => (
       <p>Copyright &copy; 2016-2019 by Matheus Alves (a.k.a. @theuves).</p>
       <p>Projeto licenciado sob a licença MIT.</p>
     </About>
-  </Section>
+  </footer>
 )
-
-export default Footer

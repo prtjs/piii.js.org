@@ -24,7 +24,7 @@ const Title = styled.h1`
   }
 `
 
-const Examples = () => (
+export default () => (
   <Section>
     <Container>
       <Title>
@@ -42,5 +42,3 @@ const Examples = () => (
     </Container>
   </Section>
 )
-
-export default Examples

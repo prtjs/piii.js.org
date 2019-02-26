@@ -98,7 +98,7 @@ const Btn = styled.a`
   }
 `
 
-const Home = () => (
+export default () => (
   <Section>
     <StyledContainer>
 
@@ -115,5 +115,3 @@ const Home = () => (
     </StyledContainer>
   </Section>
 )
-
-export default Home
