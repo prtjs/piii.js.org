@@ -1,17 +1,16 @@
 import React from 'react'
-import Header from '../components/Header'
-import Navbar from '../components/Navbar'
-import Features from '../components/Features'
-import Installation from '../components/Installation'
-import Footer from '../components/Footer'
+
 import Layout from '../components/Layout'
+
+// Page components
+import Apresentation from '../components/Home/Apresentation'
+import Examples from '../components/Home/Examples'
+import Footer from '../components/Home/Footer'
 
 export default () => (
   <Layout>
-    <Header />
-    <Navbar />
-    <Features />
-    <Installation />
+    <Apresentation />
+    <Examples />
     <Footer />
   </Layout>
 )

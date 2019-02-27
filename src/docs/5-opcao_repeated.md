@@ -3,6 +3,8 @@ path: "/docs/options/repeated"
 title: "Opção repeated"
 ---
 
+# Opção repeated
+
 > Informa se deve ignorar letras repetidas.
 
 * Tipo: *Boolean*.

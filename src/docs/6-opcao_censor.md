@@ -3,6 +3,8 @@ path: "/docs/options/censor"
 title: "Opção censor"
 ---
 
+# Opção censor
+
 > Valor que substituirá os palavrões dentro da *string*.
 
 - Tipo: *String* ou *Function*.

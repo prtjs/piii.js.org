@@ -3,6 +3,8 @@ path: "/docs/instalacao"
 title: "Instalação"
 ---
 
+# Instalação
+
 Instale-o com *npm*:
 
 ```bash

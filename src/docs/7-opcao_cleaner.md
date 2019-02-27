@@ -3,6 +3,8 @@ path: "/docs/options/cleaner"
 title: "Opção cleaner"
 ---
 
+# Opção cleaner
+
 > Removedor de acentos.
 
 - Tipo: *Function*.

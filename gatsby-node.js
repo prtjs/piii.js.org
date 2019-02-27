@@ -2,16 +2,17 @@ const path = require('path')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve('src/components/Docs.js')
+  const blogPostTemplate = path.resolve('src/components/Docs/index.js')
 
   return graphql(`
     query {
       allMarkdownRemark (sort: { fields: fileAbsolutePath }) {
         edges {
           node {
-            html
+            html,
+            fileAbsolutePath,
             frontmatter {
-              path
+              path,
               title
             }
           }
@@ -32,9 +33,9 @@ exports.createPages = ({ actions, graphql }) => {
         component: blogPostTemplate,
         context: {
           html: node.html,
-          title: node.frontmatter.title,
+          filename: path.parse(node.fileAbsolutePath).base,
           links
-        },
+        }
       })
     })
   })

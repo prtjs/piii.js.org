@@ -3,6 +3,8 @@ path: "/docs/options/aliases"
 title: "Opção aliases"
 ---
 
+# Opção aliases
+
 > Alfabeto alternativo para alguns caracteres.
 
 * Tipo: *Object*.

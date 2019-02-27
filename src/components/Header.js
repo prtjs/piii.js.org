@@ -1,54 +1,92 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
 
-const ImgLogo = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        file(relativePath: { eq: "logo.png" }) {
-          childImageSharp {
-            fixed(width: 100) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Img fixed={data.file.childImageSharp.fixed} />}
-  />
-)
+import Container from './styled/Container'
 
-const StyledContainer = styled.header`
-  padding: 80px 0;
-  text-align: center;
-  background-image: linear-gradient(to top, #a2b6d9, #e9ecc4);
+import { Link as GatsbyLink } from 'gatsby'
+
+/**
+ * Componente Link que pode aceitar tanto link interno quanto externo.
+ */
+const HybridLink = ({ children, ...props }) => {
+  if (!props.href) {
+    return (
+      <GatsbyLink {...props}>
+        {children}
+      </GatsbyLink>
+    )
+  }
+
+  return (
+    <a {...props}>
+      {children}
+    </a>
+  )
+}
+
+// Styles
+const StyledHeader = styled.header`
+  padding: 2.5px 0;
+  color: white;
+  background-color: black;
 `
-
-const StyledTitle = styled.h1`
-  margin: 5px 0;
-  font-size: 3.5em;
+const StyledContainer = styled(Container)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `
+const Link = styled(HybridLink)`
+  font-family: 'Open Sans Condensed', Helvetica, Verdana, Arial, sans-serif;
+  text-decoration: none;
+  color: white;
 
-const StyledDescription = styled.p`
-  margin: 0 auto;
-  width: 400px;
-  font-size: 1.5em;
-  line-height: 150%;
-  color: #666;
+  &:hover {
+    opacity: .8;
+  }
+  &:active {
+    opacity: .9;
+  }
+`
+const Brand = styled.h1`
+  margin: 0;
+  font-size: 2.25em;
+`
+const List = styled.ul`
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+`
+const Item = styled.li`
+  font-size: 1.15em;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 `
 
 const Header = () => (
-  <StyledContainer>
-    <ImgLogo />
-    <StyledTitle>
-      Piii.js
-    </StyledTitle>
-    <StyledDescription>
-      Um avançado filtro de palavrões da língua portuguesa.
-    </StyledDescription>
-  </StyledContainer>
+  <StyledHeader>
+    <StyledContainer>
+
+      <Brand>
+        <Link to='/'>Piii.js</Link>
+      </Brand>
+
+      <List>
+        <Item>
+          <Link to='/docs/instalacao'>
+            Documentação
+          </Link>
+        </Item>
+        <Item>
+          <Link href='https://github.com/piiijs/piii.js'>
+            Código-fonte
+          </Link>
+        </Item>
+      </List>
+
+    </StyledContainer>
+  </StyledHeader>
 )
 
 export default Header

@@ -1,11 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: 'Piii.js',
+    title:       'Piii.js',
     description: 'Um avançado filtro de palavrões.',
-    author: 'Matheus Alves (@theuves)',
+    author:      'Matheus Alves (@theuves)',
   },
+
+  /**
+   * PLUGINS
+   */
   plugins: [
     'gatsby-plugin-react-helmet',
+
+    /**
+     * Dá acesso às imagens
+     */
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -13,20 +21,10 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/logo.png',
-      },
-    },
+
+    /**
+     * Dá acesso às documentações
+     */
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -34,7 +32,53 @@ module.exports = {
         path: `${__dirname}/src/docs`,
       },
     },
-    'gatsby-transformer-remark',
+
+    'gatsby-transformer-sharp',
+
+    'gatsby-plugin-sharp',
+
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name:             'gatsby-starter-default',
+        short_name:       'starter',
+        start_url:        '/',
+        background_color: '#663399',
+        theme_color:      '#663399',
+        display:          'minimal-ui',
+        icon:             'src/images/icon.png'
+      }
+    },
+
+    /**
+     * Permite a exportação do CSS do styled-components
+     */
     'gatsby-plugin-styled-components',
+
+    /**
+     * Interpreta o markdown
+     */
+    'gatsby-transformer-remark',
+
+    /**
+     * Estiliza blocos de códigos do markdown
+     */
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix:      'language-',
+              inlineCodeMarker:  null,
+              aliases:           {},
+              showLineNumbers:   false,
+              noInlineHighlight: true,
+            },
+          },
+        ],
+      },
+    },
   ],
 }

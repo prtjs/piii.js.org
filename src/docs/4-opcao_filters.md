@@ -3,6 +3,8 @@ path: "/docs/options/filters"
 title: "Opção filters"
 ---
 
+# Opção filters
+
 > Lista de filtros.
 
 * Tipo: *Array*.

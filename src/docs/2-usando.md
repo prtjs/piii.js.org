@@ -3,6 +3,8 @@ path: "/docs/usando"
 title: "Usando"
 ---
 
+# Usando
+
 ```js
 const Piii = require("piii");
 const piiiFilters = require("piii-filters");
