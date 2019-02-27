@@ -16,6 +16,17 @@ const StyledText = styled.article`
     margin-bottom: .25em;
   }
 
+  a {
+    color: var(--blue);
+
+    &:hover {
+      text-decoration: none;
+    }
+    &:active {
+      color: darkred;
+    }
+  }
+
   ul p,
   ol p {
     margin: 0;
@@ -32,9 +43,8 @@ const StyledText = styled.article`
   h5,
   h6 {
     padding-bottom: .25em;
-    margin-top: .25em;
+    margin-top: 1em;
     margin-bottom: .75em;
-    border-bottom: solid 1px #f5f5f5;
   }
 
   h1 { font-size: calc(1em + .25em * 6); }
