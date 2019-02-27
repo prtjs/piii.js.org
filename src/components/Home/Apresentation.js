@@ -4,6 +4,8 @@ import styled from 'styled-components'
 // Components
 import Container from '../styled/Container'
 
+import { Link as GatsbyLink } from 'gatsby'
+
 // Images
 import imgUrlLogo from '../../images/logo.svg'
 import imgUrlEffect from '../../images/effect.svg'
@@ -12,7 +14,7 @@ import imgUrlEffect from '../../images/effect.svg'
 const Section = styled.section`
   position: relative;
   padding: 75px 0 125px 0;
-  background-color: #303952;
+  background-color: var(--blue);
 
   @media (max-width: 620px) {
     padding: 50px 0 100px 0;
@@ -31,7 +33,8 @@ const StyledContainer = styled(Container)`
     position: absolute;
     bottom: 0;
     left: 0;
-    background-image: url(${imgUrlEffect})
+    background-image: url(${imgUrlEffect});
+    background-size: 100% 100%;
 
   }
   @media (max-width: 620px) {
@@ -79,23 +82,28 @@ const Content = styled.article`
     opacity: .8;
   }
 `
-const Btn = styled.a`
+const Btn = styled(GatsbyLink)`
   display: inline-block;
   padding: 15px 25px; 
+  font-size: 1.15em;
   font-family: Helvetica, Verdana, Arial, sans-serif;
   border-radius: 5px;
-  border: solid 1px #d5674d;
+  border: solid 1px var(--orange-dark-2);
   text-decoration: none;
-  background-color: #e15f41;
-  background-image: linear-gradient(to bottom, #e15f41, #b23e23);
+  background-image: linear-gradient(to bottom, var(--orange-light), var(--orange-dark));
   color: white;
 
   &:hover {
     opacity: .9;
   }
   &:active {
-    background-image: linear-gradient(to top, #e15f41, #b23e23);
+    background-image: linear-gradient(to top, var(--orange-light), var(--orange-dark));
   }
+`
+const Version = styled.p`
+  margin: 10px 0 0 0;
+
+  color: gray;
 `
 
 export default () => (
@@ -107,9 +115,14 @@ export default () => (
       <Content>
         <h1>Piii.js</h1>
         <h2>Um avançado filtro de palavrões.</h2>
-        <Btn href='#'>
+
+        <Btn to='/docs/usando'>
           Documentação
         </Btn>
+
+        <Version>
+          Versão 2.0.4
+        </Version>
       </Content>
 
     </StyledContainer>
