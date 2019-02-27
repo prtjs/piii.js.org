@@ -51,6 +51,8 @@ const StyledText = styled.article`
     margin-top: 1em;
     margin-bottom: .75em;
     border-bottom: solid 1px #f5f5f5;
+    overflow: auto;
+    text-overflow: ellipsis;
   }
 
   h1 { font-size: calc(1em + .25em * 6); }

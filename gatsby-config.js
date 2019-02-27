@@ -40,11 +40,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name:             'gatsby-starter-default',
-        short_name:       'starter',
+        name:             'Piii.js',
+        short_name:       'Piii.js',
         start_url:        '/',
-        background_color: '#663399',
-        theme_color:      '#663399',
+        background_color: '#303952',
+        theme_color:      '#303952',
         display:          'minimal-ui',
         icon:             'src/images/icon.png'
       }
