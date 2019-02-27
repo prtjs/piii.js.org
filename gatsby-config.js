@@ -1,9 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: 'Piii.js',
+    title:       'Piii.js',
     description: 'Um avançado filtro de palavrões.',
-    author: 'Matheus Alves (@theuves)',
+    author:      'Matheus Alves (@theuves)',
   },
+
+  /**
+   * PLUGINS
+   */
   plugins: [
     'gatsby-plugin-react-helmet',
 
@@ -14,7 +18,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`,
+        path: '${__dirname}/src/images',
       },
     },
 
@@ -25,7 +29,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'markdown-pages',
-        path: `${__dirname}/src/docs`,
+        path: '${__dirname}/src/docs',
       },
     },
 
@@ -36,13 +40,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
-        start_url: '/',
+        name:             'gatsby-starter-default',
+        short_name:       'starter',
+        start_url:        '/',
         background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-      },
+        theme_color:      '#663399',
+        display:          'minimal-ui',
+        icon:             'src/images/icon.png'
+      }
     },
 
     /**
@@ -59,20 +64,20 @@ module.exports = {
      * Estiliza blocos de códigos do markdown
      */
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: 'gatsby-remark-prismjs',
             options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
+              classPrefix:      'language-',
+              inlineCodeMarker:  null,
+              aliases:           {},
+              showLineNumbers:   false,
               noInlineHighlight: true,
             },
           },
-       ],
+        ],
       },
     },
   ],
