@@ -116,7 +116,7 @@ export default () => (
         <h1>Piii.js</h1>
         <h2>Um avançado filtro de palavrões.</h2>
 
-        <Btn to='/docs/usando'>
+        <Btn to='/docs/instalacao'>
           Documentação
         </Btn>
 

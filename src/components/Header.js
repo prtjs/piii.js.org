@@ -74,7 +74,7 @@ const Header = () => (
 
       <List>
         <Item>
-          <Link to='/docs/usando'>
+          <Link to='/docs/instalacao'>
             Documentação
           </Link>
         </Item>
