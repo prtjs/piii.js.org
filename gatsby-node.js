@@ -9,7 +9,8 @@ exports.createPages = ({ actions, graphql }) => {
       allMarkdownRemark (sort: { fields: fileAbsolutePath }) {
         edges {
           node {
-            html
+            html,
+            fileAbsolutePath,
             frontmatter {
               path,
               title
@@ -32,6 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: blogPostTemplate,
         context: {
           html: node.html,
+          filename: path.parse(node.fileAbsolutePath).base,
           links
         }
       })
