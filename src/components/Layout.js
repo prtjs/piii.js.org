@@ -8,6 +8,13 @@ import Header from './Header'
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto|Open+Sans+Condensed:300');
 
+  html {
+    --blue: #303952;
+    --orange-light: #e15f41;
+    --orange-dark: #b23e23;
+    --orange-dark-2: #d5674d;
+  }
+
   body {
     margin: 0;
     padding: 0;
