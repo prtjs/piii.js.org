@@ -6,6 +6,10 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+
+    /**
+     * Dá acesso às imagens
+     */
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -13,8 +17,22 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
+    /**
+     * Dá acesso às documentações
+     */
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'markdown-pages',
+        path: `${__dirname}/src/docs`,
+      },
+    },
+
     'gatsby-transformer-sharp',
+
     'gatsby-plugin-sharp',
+
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -26,14 +44,36 @@ module.exports = {
         display: 'minimal-ui',
       },
     },
+
+    /**
+     * Permite a exportação do CSS do styled-components
+     */
+    'gatsby-plugin-styled-components',
+
+    /**
+     * Interpreta o markdown
+     */
+    'gatsby-transformer-remark',
+
+    /**
+     * Estiliza blocos de códigos do markdown
+     */
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-transformer-remark`,
       options: {
-        name: 'markdown-pages',
-        path: `${__dirname}/src/docs`,
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: true,
+            },
+          },
+       ],
       },
     },
-    'gatsby-transformer-remark',
-    'gatsby-plugin-styled-components',
   ],
 }
