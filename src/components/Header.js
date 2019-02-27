@@ -2,7 +2,27 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Container from './styled/Container'
-import Link from './styled/Link'
+
+import { Link as GatsbyLink } from 'gatsby'
+
+/**
+ * Componente Link que pode aceitar tanto link interno quanto externo.
+ */
+const HybridLink = ({ children, ...props }) => {
+  if (!props.href) {
+    return (
+      <GatsbyLink {...props}>
+        {children}
+      </GatsbyLink>
+    )
+  }
+
+  return (
+    <a {...props}>
+      {children}
+    </a>
+  )
+}
 
 // Styles
 const StyledHeader = styled.header`
@@ -14,6 +34,18 @@ const StyledContainer = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`
+const Link = styled(HybridLink)`
+  font-family: 'Open Sans Condensed', Helvetica, Verdana, Arial, sans-serif;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    opacity: .8;
+  }
+  &:active {
+    opacity: .9;
+  }
 `
 const Brand = styled.h1`
   margin: 0;
@@ -37,15 +69,19 @@ const Header = () => (
     <StyledContainer>
 
       <Brand>
-        <Link href='#'>Piii.js</Link>
+        <Link to='/'>Piii.js</Link>
       </Brand>
 
       <List>
         <Item>
-          <Link href='#'>Documentação</Link>
+          <Link to='/docs/usando'>
+            Documentação
+          </Link>
         </Item>
         <Item>
-          <Link href='#'>Código-fonte</Link>
+          <Link href='https://github.com/piiijs/piii.js'>
+            Código-fonte
+          </Link>
         </Item>
       </List>
 
