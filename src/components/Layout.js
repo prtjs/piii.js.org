@@ -14,6 +14,8 @@ const GlobalStyle = createGlobalStyle`
     --orange-dark: #b23e23;
     --orange-dark-2: #d5674d;
 
+    box-sizing: border-box;
+
     &::selection {
       background-color: #ddd;
     }
