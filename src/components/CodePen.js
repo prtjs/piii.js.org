@@ -8,6 +8,7 @@ const Iframe = styled.iframe`
   height: ${(props) => props.penHeight}px;
   border: none;
   overflow: hidden;
+  background-color: #eee;
 `
 
 const CodePen = ({
