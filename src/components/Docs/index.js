@@ -38,6 +38,7 @@ const Article = styled.article`
 export default ({
   pageContext: {
     html,        // HTML gerado a partir do markdown.
+    currentPath,        // Caminho para o documento atual.
     filename,    // Nome do arquivo que será usado para linkar ao GitHub.
     links        // Links de todos os documentos.
   }
@@ -51,7 +52,7 @@ export default ({
         </Article>
 
         <Aside>
-          <Topics links={links} />
+          <Topics links={links} currentPath={currentPath} />
         </Aside>
 
       </Main>

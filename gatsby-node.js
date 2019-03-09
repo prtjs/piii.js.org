@@ -25,7 +25,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const { edges } = result.data.allMarkdownRemark
-    const links = edges.map((edge) => edge.node.frontmatter) 
+    const links = edges.map((edge) => edge.node.frontmatter)
 
     edges.forEach(({ node }) => {
       createPage({
@@ -33,6 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: blogPostTemplate,
         context: {
           html: node.html,
+          currentPath: node.frontmatter.path,
           filename: path.parse(node.fileAbsolutePath).base,
           links
         }
