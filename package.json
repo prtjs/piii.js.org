@@ -11,6 +11,7 @@
     "deploy": "cp CNAME ./public && gh-pages -d ./public"
   },
   "dependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.20",

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Container from './styled/Container'
+import Container from './styled/GlobalContainer'
 
 import { Link as GatsbyLink } from 'gatsby'
 

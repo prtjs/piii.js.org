@@ -17,25 +17,20 @@ import imgUrlSocialTwitter from '../images/social-icons/twitter.svg'
 
 // Styles
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto|Open+Sans+Condensed:300');
+  @import url('https://fonts.googleapis.com/css?family=Roboto|Kaushan+Script|Open+Sans');
 
   * {
-    --blue: #303952;
-    --orange-light: #e15f41;
-    --orange-dark: #b23e23;
-    --orange-dark-2: #d5674d;
-
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 
     &::selection {
-      background-color: #ddd;
+      /*background-color: #ddd;*/
     }
   }
 
   body {
-    margin: 0;
-    padding: 0;
-    font-family: Roboto, Helvetica, Verdana, Arial, sans-serif;
+    font-family: 'Open Sans', Verdana, Arial, sans-serif;
   }
 `
 
@@ -90,8 +85,6 @@ export default ({ children }) => (
         </Helmet>
 
         <GlobalStyles />
-
-        <Header />
 
         <main>
           {children}

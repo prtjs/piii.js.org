@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 // Components
 import Layout from '../Layout'
-import Container from '../styled/Container'
+import Container from '../styled/GlobalContainer'
 import Topics from './Topics'
 import Text from './Text'
 
