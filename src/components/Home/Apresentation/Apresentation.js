@@ -10,10 +10,11 @@ import {
   Section,
   Container,
   Content,
-  Ver,
   Title,
+  Nw,
   Desc,
   Btn,
+  BtnIcon,
   Imgs,
   ImgsCol,
   ImgsColItem
@@ -23,10 +24,19 @@ export default () => (
   <Section>
     <Container>
       <Content>
-        <Ver>Versão 2.0.4</Ver>
         <Title>Piii.js</Title>
-        <Desc>Um avançado filtro de palavrões.</Desc>
-        <Btn>Leia documentação</Btn>
+        <Desc>
+          <Nw>Um avançado</Nw>{` `}
+          <Nw>filtro de</Nw>{` `}
+          <Nw>palavrões.</Nw>
+        </Desc>
+        <Btn  href="#">
+          Ler a documentação
+          {` `}
+          <BtnIcon>
+            <i className="fas fa-arrow-right" />
+          </BtnIcon>
+        </Btn>
       </Content>
 
       <Imgs>

@@ -4,7 +4,7 @@
   preserveAspectRatio='none'
 >
   <polygon
-    fill='white'
-    points='0,100 100,0 100,100'
+    fill="#e67e22"
+    points='0,0 100,50 0,100'
   />
 </svg>

@@ -6,26 +6,22 @@ import { createGlobalStyle } from 'styled-components'
 // Components
 import Header from './Header'
 
-// Images
-import imgUrlIcon from '../images/icon.png'
-import imgUrlEffect from '../images/effect.svg'
-import imgUrlLogo from '../images/logo.svg'
-import imgUrlSocialGithub from '../images/social-icons/github.svg'
-import imgUrlSocialNpm from '../images/social-icons/npm.svg'
-import imgUrlSocialPaypal from '../images/social-icons/paypal.svg'
-import imgUrlSocialTwitter from '../images/social-icons/twitter.svg'
-
 // Styles
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto|Kaushan+Script|Open+Sans');
+  @import url('https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Luckiest+Guy');
+  @import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
 
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
+    &:focus {
+      outline: dashed;
+      outline-width: .5px;
+    }
     &::selection {
-      /*background-color: #ddd;*/
+      background-color: #ddd;
     }
   }
 
@@ -53,35 +49,35 @@ export default ({ children }) => (
           encodeSpecialCharacters={true}
           defaultTitle={data.site.siteMetadata.title}
         >
-          <html lang="pt-BR" />
-
-          <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
-          <link rel="preconnect" href="https://codepen.io/" />
-
-          <link rel="preload" as="image" href={imgUrlIcon} />
-          <link rel="preload" as="image" href={imgUrlEffect} />
-          <link rel="preload" as="image" href={imgUrlLogo} />
-          <link rel="preload" as="image" href={imgUrlLogo} />
-          <link rel="preload" as="image" href={imgUrlSocialGithub} />
-          <link rel="preload" as="image" href={imgUrlSocialNpm} />
-          <link rel="preload" as="image" href={imgUrlSocialPaypal} />
-          <link rel="preload" as="image" href={imgUrlSocialTwitter} />
-
-          <meta name="author" content={data.site.siteMetadata.author} />
-          <meta name="description" content={data.site.siteMetadata.description} />
-
-          <meta property="og:url" content="https://piii.js.org/" />
-          <meta property="og:title" content={data.site.siteMetadata.title} />
-          <meta property="og:description" content={data.site.siteMetadata.description} />
-
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:site" content="@theuves" />
-          <meta name="twitter:title" content={data.site.siteMetadata.title} />
-          <meta name="twitter:description" content={data.site.siteMetadata.title} />
-
-          <link rel="canonical" href="https://piii.js.org/" />
-          <link rel="favicon" href={imgUrlIcon} />
+{/*           <html lang="pt-BR" /> */}
+{/*  */}
+{/*           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> */}
+{/*  */}
+{/*           <link rel="preconnect" href="https://codepen.io/" /> */}
+{/*  */}
+{/*           <link rel="preload" as="image" href={imgUrlIcon} /> */}
+{/*           <link rel="preload" as="image" href={imgUrlEffect} /> */}
+{/*           <link rel="preload" as="image" href={imgUrlLogo} /> */}
+{/*           <link rel="preload" as="image" href={imgUrlLogo} /> */}
+{/*           <link rel="preload" as="image" href={imgUrlSocialGithub} /> */}
+{/*           <link rel="preload" as="image" href={imgUrlSocialNpm} /> */}
+{/*           <link rel="preload" as="image" href={imgUrlSocialPaypal} /> */}
+{/*           <link rel="preload" as="image" href={imgUrlSocialTwitter} /> */}
+{/*  */}
+{/*           <meta name="author" content={data.site.siteMetadata.author} /> */}
+{/*           <meta name="description" content={data.site.siteMetadata.description} /> */}
+{/*  */}
+{/*           <meta property="og:url" content="https://piii.js.org/" /> */}
+{/*           <meta property="og:title" content={data.site.siteMetadata.title} /> */}
+{/*           <meta property="og:description" content={data.site.siteMetadata.description} /> */}
+{/*  */}
+{/*           <meta name="twitter:card" content="summary" /> */}
+{/*           <meta name="twitter:site" content="@theuves" /> */}
+{/*           <meta name="twitter:title" content={data.site.siteMetadata.title} /> */}
+{/*           <meta name="twitter:description" content={data.site.siteMetadata.title} /> */}
+{/*  */}
+{/*           <link rel="canonical" href="https://piii.js.org/" /> */}
+{/*           <link rel="favicon" href={imgUrlIcon} /> */}
         </Helmet>
 
         <GlobalStyles />
