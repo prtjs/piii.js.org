@@ -1,35 +1,29 @@
 import styled from 'styled-components'
 import GlobalContainer from '../../styled/GlobalContainer'
 
-// Images
-import srcImgArrowRight from '../../../images/arrow-right.svg'
-
 export const Section = styled.section`
   position: relative;
   padding-bottom: 75px;
   background-image: linear-gradient(-45deg, #8e44ad, #5e7083);
 `
-
 export const Container = styled(GlobalContainer)`
   display: flex;
   justify-content: space-between;
 `
-
 export const Content = styled.article`
 
 `
-
-export const Title = styled.h1`
+export const Title = styled.a`
+  display: inline-block;
   margin-top: 50px;
   font-size: 2em;
   font-weight: lighter;
+  text-decoration: none;
   color: rgba(255, 255, 255, .5);
 `
-
 export const Nw = styled.span`
   white-space: nowrap;
 `
-
 export const Desc = styled.h2`
   margin-bottom: 50px;
   font-family: 'Luckiest Guy';
@@ -42,7 +36,6 @@ export const Desc = styled.h2`
   line-height: 115%;
   color: white;
 `
-
 export const Btn = styled.a`
   display: inline-block;
   padding: 20px 40px;
@@ -65,7 +58,6 @@ export const Btn = styled.a`
     color: #ddd;
   }
 `
-
 export const BtnIcon = styled.span`
   display: inline-block;
   margin-left: 2px;
@@ -76,12 +68,10 @@ export const BtnIcon = styled.span`
     to { transform: translateX(0); }
   }
 `
-
 export const Imgs = styled.div`
   --gap: 10px;
   display: flex;
 `
-
 export const ImgsCol = styled.div`
   display: flex;
   flex-direction: column;
@@ -121,7 +111,6 @@ export const ImgsCol = styled.div`
     }
   }
 `
-
 export const ImgsColItem = styled.div`
   display: block;
   width: 200px;

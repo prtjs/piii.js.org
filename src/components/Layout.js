@@ -8,7 +8,7 @@ import Header from './Header'
 
 // Styles
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Luckiest+Guy');
+  @import url('https://fonts.googleapis.com/css?family=Roboto|Luckiest+Guy');
   @import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
 
   * {
@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Open Sans', Verdana, Arial, sans-serif;
+    font-family: Roboto, Verdana, Arial, sans-serif;
   }
 `
 

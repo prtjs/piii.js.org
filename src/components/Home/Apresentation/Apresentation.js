@@ -24,16 +24,16 @@ export default () => (
   <Section>
     <Container>
       <Content>
-        <Title>Piii.js</Title>
-        <Desc>
-          <Nw>Um avançado</Nw>{` `}
-          <Nw>filtro de</Nw>{` `}
-          <Nw>palavrões.</Nw>
+        <Title href="#" role="banner">Piii.js</Title>
+        <Desc aria-label="Um avançado filtro de palavrões.">
+          <Nw aria-hidden="true">Um avançado</Nw>{` `}
+          <Nw aria-hidden="true">filtro de</Nw>{` `}
+          <Nw aria-hidden="true">palavrões.</Nw>
         </Desc>
         <Btn  href="#">
           Ler a documentação
           {` `}
-          <BtnIcon>
+          <BtnIcon aria-hidden="true">
             <i className="fas fa-arrow-right" />
           </BtnIcon>
         </Btn>

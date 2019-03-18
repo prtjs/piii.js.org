@@ -1,6 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
+//
+// Props:
+// ======
+//
+// - penId     {string}       Id do pen.
+// - penUser   {string}       Usuário que a publicou.
+// - penHeight {number = 300} Altura do container.
+// - penTitle  {string}       Título.
+//
+
 const THEME_ID = 12945
 
 const Iframe = styled.iframe`
@@ -21,7 +31,7 @@ const CodePen = ({
 
   url.searchParams.set('height', penHeight)
   url.searchParams.set('theme-id', THEME_ID)
-  url.searchParams.set('default-tab', 'result,js')
+  url.searchParams.set('default-tab', 'result')
 
   return (
     <Iframe
