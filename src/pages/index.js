@@ -7,7 +7,8 @@ import {
   Apresentation,
   ApresentationInfo,
   Informations,
-  Features
+  Features,
+  Footer
 } from '../components/Home'
 
 export default () => (
@@ -16,5 +17,6 @@ export default () => (
     <ApresentationInfo />
     <Informations />
     <Features />
+    <Footer />
   </Layout>
 )
