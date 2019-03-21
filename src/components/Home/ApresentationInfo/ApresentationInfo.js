@@ -13,14 +13,14 @@ export default () => (
 
     <iframe
       src="https://ghbtns.com/github-btn.html?user=piiijs&repo=piii.js&type=star&count=true"
-      frameborder="0"
+      frameBorder="0"
       scrolling="0"
       width="80px"
       height="20px"
     />
     <iframe
       src="https://ghbtns.com/github-btn.html?user=piiijs&repo=piii.js&type=fork&count=true"
-      frameborder="0"
+      frameBorder="0"
       scrolling="0"
       width="80px"
       height="20px"

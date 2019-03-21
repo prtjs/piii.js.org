@@ -11,7 +11,6 @@ import {
   Container,
   Content,
   Title,
-  Nw,
   Desc,
   Btn,
   BtnIcon,
@@ -26,9 +25,9 @@ export default () => (
       <Content>
         <Title href="#" role="banner">Piii.js</Title>
         <Desc aria-label="Um avançado filtro de palavrões.">
-          <Nw aria-hidden="true">Um avançado</Nw>{` `}
-          <Nw aria-hidden="true">filtro de</Nw>{` `}
-          <Nw aria-hidden="true">palavrões.</Nw>
+          Um avançado<br />
+          filtro de<br />
+          palavrões.
         </Desc>
         <Btn  href="#">
           Ler a documentação
@@ -39,7 +38,7 @@ export default () => (
         </Btn>
       </Content>
 
-      <Imgs>
+      <Imgs aria-hidden="true">
         <ImgsCol>
           <ImgsColItem img={srcImg1} />
           <ImgsColItem img={srcImg2} />

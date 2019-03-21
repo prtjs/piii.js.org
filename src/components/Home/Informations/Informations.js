@@ -11,7 +11,7 @@ import {
 } from './Informations.styled.js'
 
 export default () => (
-  <Section>
+  <Section aria-labelledby="o-que-e-piii-js">
     <Container>
       <Example>
         <CodePen
@@ -23,7 +23,7 @@ export default () => (
       </Example>
       <Content>
         <Text>
-          <Title>O Que é Piii.js?</Title>
+          <Title id="o-que-e-piii-js">O Que é Piii.js?</Title>
           <p>
             <b>Piii.js</b> é uma biblioteca JavaScript destinada a filtragem de
             palavras em um texto com foco principal às <b>palavras de baixo
@@ -35,9 +35,9 @@ export default () => (
             formas diferentes, por exemplo.
           </p>
           <p>
-            A palavras que devem ser filtradas são distribuídas em um pacote
+            As palavras que devem ser filtradas são distribuídas em um pacote
             separado dessa ferramenta, permitindo asssim, que o desenvolvedor
-            tenha a possíbilidade de criar seus próprios filtros, dependendo
+            tenha a possibilidade de criar seus próprios filtros, dependendo
             de suas necessidades.
           </p>
         </Text>

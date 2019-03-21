@@ -4,6 +4,7 @@ import GlobalContainer from '../../styled/GlobalContainer'
 export const Section = styled.section`
   position: relative;
   padding-bottom: 75px;
+  background-color: #5e7083;
   background-image: linear-gradient(-45deg, #8e44ad, #5e7083);
 `
 export const Container = styled(GlobalContainer)`
@@ -21,9 +22,6 @@ export const Title = styled.a`
   text-decoration: none;
   color: rgba(255, 255, 255, .5);
 `
-export const Nw = styled.span`
-  white-space: nowrap;
-`
 export const Desc = styled.h2`
   margin-bottom: 50px;
   font-family: 'Luckiest Guy';
@@ -32,6 +30,7 @@ export const Desc = styled.h2`
   text-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
   text-decoration: line-through;
   text-decoration-color: rgba(142, 68, 173, .5);
+  white-space: nowrap;
   letter-spacing: 5px;
   line-height: 115%;
   color: white;
@@ -47,7 +46,8 @@ export const Btn = styled.a`
   background-color: #e67e22;
   color: white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #e2802a;
     color: #eee;
   }
@@ -118,6 +118,7 @@ export const ImgsColItem = styled.div`
   border-radius: 3px;
   filter: grayscale(.666);
   box-shadow: 25px 25px 0 0 rgba(0, 0, 0, .075);
+  background-color: rgba(0, 0, 0, .5);
   background-image: url(${props => props.img});
   background-size: cover;
 

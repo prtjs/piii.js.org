@@ -18,7 +18,6 @@ export const Example = styled.div`
 export const Content = styled.div`
   flex: 1;
   font-size: 1.15em;
-  text-align: right;
 
   p:not(:last-child) {
     margin-bottom: 15px;
@@ -28,7 +27,7 @@ export const Text = styled.article`
   padding: 35px;
   margin-left: 75px;
   border-radius: 3px;
-  text-align: justify;
+  text-align: left;
   line-height: 175%;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .05);
   color: #333;
