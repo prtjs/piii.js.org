@@ -3,12 +3,16 @@ import StyledContainer from '../../styled/StyledContainer'
 
 // Design
 import { lgMarginY, mdMarginY } from '../../design/margins'
+import { purple, blue, orange } from '../../design/colors'
+
+// Utils
+import handleColor from 'handle-hex-colors'
 
 export const Section = styled.section`
   position: relative;
   padding-bottom: ${lgMarginY}px;
-  background-color: #5e7083;
-  background-image: linear-gradient(-45deg, #8e44ad, #5e7083);
+  background-color: ${purple};
+  background-image: linear-gradient(45deg, ${blue}, ${purple});
 `
 export const Container = styled(StyledContainer)`
   display: flex;
@@ -44,20 +48,20 @@ export const Btn = styled.a`
   border-radius: 5px;
   font-size: 1.5em;
   transition: all .15s linear;
-  box-shadow: 0 6px 0 0 #d35400;
+  box-shadow: 0 6px 0 0 ${orange};
   text-decoration: none;
-  background-color: #e67e22;
+  background-color: ${orange};
   color: white;
 
   &:hover,
   &:focus {
-    background-color: #e2802a;
+    background-color: ${handleColor(orange, (x) => x + 5)};
     color: #eee;
   }
   &:active {
     transform: translateY(2px);
-    box-shadow: 0 4px 0 0 #d35400;
-    background-color: #e47c20;
+    box-shadow: 0 4px 0 0 ${orange};
+    background-color: ${handleColor(orange, (x) => x + 10)};
     color: #ddd;
   }
 `

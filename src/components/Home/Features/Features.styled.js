@@ -3,6 +3,13 @@ import StyledContainer from '../../styled/StyledContainer'
 
 // Design
 import { xlMarginY, smMarginY } from '../../design/margins'
+import { darkOrange, purple } from '../../design/colors'
+
+// Utils
+import handleColor from 'handle-hex-colors'
+
+const lighttOrange = handleColor(darkOrange, (x) => x + 10 * 17)
+const lighttPurple = handleColor(purple, (x) => x + 10 * 17)
 
 export const Section = styled.section`
   padding: ${xlMarginY}px 0;
@@ -31,8 +38,8 @@ export const ItemIcon = styled.i`
   justify-content: center;
   border-radius: 50%;
   font-size: 2em;
-  background-color: ${props => props.color === 'orange' ? '#e67e2233': '#8e44ad33'};
-  color: ${props => props.color === 'orange' ? '#e67e22': '#8e44ad'};
+  background-color: ${props => props.color === 'orange' ? lighttOrange : lighttPurple};
+  color: ${props => props.color === 'orange' ? darkOrange : purple};
 `
 export const ItemTitle = styled.h2`
   margin-bottom: 15px;
