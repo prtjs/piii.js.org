@@ -14,9 +14,9 @@ import {
 export default () => (
   <Layout>
     <Apresentation />
-    <ApresentationInfo />
-    <Informations />
-    <Features />
-    <Footer />
+    {/* <ApresentationInfo /> */}
+    {/* <Informations /> */}
+    {/* <Features /> */}
+    {/* <Footer /> */}
   </Layout>
 )

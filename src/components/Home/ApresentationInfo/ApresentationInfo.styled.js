@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 // Design
 import { smMarginY } from '../../design/margins'
+import { mdWidth } from '../../design/devices'
 
 export const Section = styled.section`
   position: relative;
@@ -13,5 +14,10 @@ export const Section = styled.section`
 
   iframe {
     margin-left: 10px;
+  }
+
+  @media (max-width: ${mdWidth}px) {
+    display: block;
+    text-align: center;
   }
 `

@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import StyledContainer from '../../styled/StyledContainer'
 
 // Design
-import { lgMarginY, mdMarginY } from '../../design/margins'
+import { smMarginY, mdMarginY, lgMarginY } from '../../design/margins'
 import { purple, blue, orange, darkOrange } from '../../design/colors'
+import { smWidth, mdWidth, lgWidth, xlWidth } from '../../design/devices'
 
 // Utils
 import handleColor from 'handle-hex-colors'
@@ -19,20 +20,37 @@ export const Container = styled(StyledContainer)`
   justify-content: space-between;
 `
 export const Content = styled.article`
+  font-size: 10px;
+  margin: 0 auto;
+  text-align: center;
 
+  @media (min-width: ${smWidth}px) {
+    font-size: 12px;
+  }
+  @media (min-width: ${lgWidth}px) {
+    margin: initial;
+    text-align: initial;
+  }
+  @media (min-width: ${xlWidth - 170}px) {
+    font-size: 14px;
+  }
+  @media (min-width: ${xlWidth - 50}px) {
+    font-size: 16px;
+  }
 `
 export const Title = styled.a`
   display: inline-block;
   margin-top: ${mdMarginY}px;
+  margin-bottom: ${smMarginY / 2}px;
   font-size: 2em;
   font-weight: lighter;
   text-decoration: none;
   color: rgba(255, 255, 255, .5);
 `
 export const Desc = styled.h2`
-  margin-bottom: ${mdMarginY}px;
+  margin-bottom: ${smMarginY}px;
   font-family: 'Luckiest Guy';
-  font-size: 6em;
+  font-size: 5em;
   font-weight: lighter;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
   text-decoration: line-through;
@@ -41,6 +59,10 @@ export const Desc = styled.h2`
   letter-spacing: 5px;
   line-height: 115%;
   color: white;
+
+  @media (min-width: ${smWidth}px) {
+    font-size: 6em;
+  }
 `
 export const Btn = styled.a`
   display: inline-block;
@@ -77,7 +99,11 @@ export const BtnIcon = styled.span`
 `
 export const Imgs = styled.div`
   --gap: 10px;
-  display: flex;
+  display: none;
+  
+  @media (min-width: ${lgWidth}px) {
+    display: flex;
+  }
 `
 export const ImgsCol = styled.div`
   display: flex;
@@ -120,8 +146,8 @@ export const ImgsCol = styled.div`
 `
 export const ImgsColItem = styled.div`
   display: block;
-  width: 200px;
-  height: 225px;
+  width: 160px;
+  height: 185px;
   border-radius: 3px;
   filter: grayscale(.666);
   box-shadow: 25px 25px 0 0 rgba(0, 0, 0, .075);
@@ -134,5 +160,10 @@ export const ImgsColItem = styled.div`
   }
   &:last-child {
     margin-top: var(--gap);
+  }
+
+  @media (min-width: ${xlWidth}px) {
+    width: 200px;
+    height: 225px;
   }
 `
