@@ -1,10 +1,13 @@
 import styled from 'styled-components'
-import GlobalContainer from '../../styled/GlobalContainer'
+import StyledContainer from '../../styled/StyledContainer'
+
+// Design
+import { smMarginY } from '../../design/margins'
 
 export const Section = styled.section`
   background-color: #fbfbfb;
 `
-export const Container = styled(GlobalContainer)`
+export const Container = styled(StyledContainer)`
   padding: 100px 0;
   display: flex;
 `
@@ -24,7 +27,7 @@ export const Content = styled.div`
   }
 `
 export const Text = styled.article`
-  padding: 35px;
+  padding: ${smMarginY}px;
   margin-left: 75px;
   border-radius: 3px;
   text-align: left;

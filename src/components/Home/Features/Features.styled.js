@@ -1,14 +1,17 @@
 import styled from 'styled-components'
-import GlobalContainer from '../../styled/GlobalContainer'
+import StyledContainer from '../../styled/StyledContainer'
+
+// Design
+import { xlMarginY, smMarginY } from '../../design/margins'
 
 export const Section = styled.section`
-  padding: 100px 0;
+  padding: ${xlMarginY}px 0;
 `
-export const Container = styled(GlobalContainer)`
+export const Container = styled(StyledContainer)`
   display: flex;
 `
 export const Item = styled.article`
-  padding: 0 25px;
+  padding: 0 ${smMarginY}px;
   text-align: center;
 
   &:first-child {

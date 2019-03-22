@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-const GlobalContainer = styled.div`
+const StyledContainer = styled.div`
   margin: 0 auto;
   max-width: 1200px;
 `
 
-export default GlobalContainer
+export default StyledContainer

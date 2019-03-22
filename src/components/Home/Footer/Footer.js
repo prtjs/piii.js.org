@@ -77,7 +77,7 @@ export default () => (
     <FooterSecondary>
       <Container>
         <div>
-          Feito com <i class="fas fa-heart" /> em Dourados-MS, Brasil.
+          Feito com <i className="fas fa-heart" /> em Dourados-MS, Brasil.
         </div>
         <div>
           &copy; 2015-2019 Matheus Alves

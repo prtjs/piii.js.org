@@ -1,13 +1,16 @@
 import styled from 'styled-components'
-import GlobalContainer from '../../styled/GlobalContainer'
+import StyledContainer from '../../styled/StyledContainer'
+
+// Design
+import { lgMarginY, mdMarginY } from '../../design/margins'
 
 export const Section = styled.section`
   position: relative;
-  padding-bottom: 75px;
+  padding-bottom: ${lgMarginY}px;
   background-color: #5e7083;
   background-image: linear-gradient(-45deg, #8e44ad, #5e7083);
 `
-export const Container = styled(GlobalContainer)`
+export const Container = styled(StyledContainer)`
   display: flex;
   justify-content: space-between;
 `
@@ -16,14 +19,14 @@ export const Content = styled.article`
 `
 export const Title = styled.a`
   display: inline-block;
-  margin-top: 50px;
+  margin-top: ${mdMarginY}px;
   font-size: 2em;
   font-weight: lighter;
   text-decoration: none;
   color: rgba(255, 255, 255, .5);
 `
 export const Desc = styled.h2`
-  margin-bottom: 50px;
+  margin-bottom: ${mdMarginY}px;
   font-family: 'Luckiest Guy';
   font-size: 6em;
   font-weight: lighter;

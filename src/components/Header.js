@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Container from './styled/GlobalContainer'
+import StyledContainer from './styled/StyledContainer'
 
 import { Link as GatsbyLink } from 'gatsby'
 
@@ -30,7 +30,7 @@ const StyledHeader = styled.header`
   color: white;
   background-color: black;
 `
-const StyledContainer = styled(Container)`
+const Container = styled(StyledContainer)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,7 +66,7 @@ const Item = styled.li`
 
 const Header = () => (
   <StyledHeader>
-    <StyledContainer>
+    <Container>
 
       <Brand>
         <Link to='/'>Piii.js</Link>
@@ -85,7 +85,7 @@ const Header = () => (
         </Item>
       </List>
 
-    </StyledContainer>
+    </Container>
   </StyledHeader>
 )
 

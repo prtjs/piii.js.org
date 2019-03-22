@@ -1,15 +1,18 @@
 import styled from 'styled-components'
-import GlobalContainer from '../../styled/GlobalContainer'
+import StyledContainer from '../../styled/StyledContainer'
+
+// Design
+import { mdMarginY, smMarginY } from '../../design/margins'
 
 export const Footer = styled.footer`
   background-color: #333;
   color: white;
 `
 export const FooterPrimary = styled.div`
-  padding: 50px;
+  padding: ${mdMarginY}px;
 `
 export const FooterSecondary = styled.div`
-  padding: 25px;
+  padding: ${smMarginY}px;
   font-size: .85em;
   color: #999;
   background-color: #222;
@@ -19,7 +22,7 @@ export const FooterSecondary = styled.div`
     justify-content: space-between;
   }
 `
-export const Container = styled(GlobalContainer)`
+export const Container = styled(StyledContainer)`
   display: flex;
 `
 export const LinksSection = styled.div`
