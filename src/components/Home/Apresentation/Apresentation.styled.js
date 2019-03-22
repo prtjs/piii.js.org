@@ -3,7 +3,7 @@ import StyledContainer from '../../styled/StyledContainer'
 
 // Design
 import { lgMarginY, mdMarginY } from '../../design/margins'
-import { purple, blue, orange } from '../../design/colors'
+import { purple, blue, orange, darkOrange } from '../../design/colors'
 
 // Utils
 import handleColor from 'handle-hex-colors'
@@ -48,7 +48,7 @@ export const Btn = styled.a`
   border-radius: 5px;
   font-size: 1.5em;
   transition: all .15s linear;
-  box-shadow: 0 6px 0 0 ${orange};
+  box-shadow: 0 6px 0 0 ${darkOrange};
   text-decoration: none;
   background-color: ${orange};
   color: white;
