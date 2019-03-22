@@ -46,6 +46,10 @@ export const Title = styled.a`
   font-weight: lighter;
   text-decoration: none;
   color: rgba(255, 255, 255, .5);
+
+  @media (min-width: ${xlWidth - 170}px) {
+    margin-bottom: 0;
+  }
 `
 export const Desc = styled.h2`
   margin-bottom: ${smMarginY}px;

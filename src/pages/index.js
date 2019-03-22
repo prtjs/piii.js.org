@@ -14,7 +14,7 @@ import {
 export default () => (
   <Layout>
     <Apresentation />
-    {/* <ApresentationInfo /> */}
+    <ApresentationInfo />
     {/* <Informations /> */}
     {/* <Features /> */}
     {/* <Footer /> */}
