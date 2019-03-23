@@ -15,8 +15,8 @@ export default () => (
   <Layout>
     <Apresentation />
     <ApresentationInfo />
-    {/* <Informations /> */}
-    {/* <Features /> */}
-    {/* <Footer /> */}
+    <Informations />
+    <Features />
+    <Footer />
   </Layout>
 )
