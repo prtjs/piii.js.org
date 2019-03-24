@@ -25,6 +25,8 @@ export const SubContainer = styled.div`
   display: block;
   overflow-x: scroll;
   white-space: nowrap;
+  box-shadow: inset 15px 0 15px -15px rgba(0,0,0,.05),
+    inset -15px 0 15px -15px rgba(0,0,0,.05);
 
   * {
     white-space: normal;
@@ -33,6 +35,7 @@ export const SubContainer = styled.div`
     display: flex;
     overflow-x: hidden;
     white-space: normal;
+    box-shadow: unset;
   }
 `
 export const Item = styled.article`
