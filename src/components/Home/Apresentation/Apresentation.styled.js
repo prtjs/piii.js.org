@@ -54,7 +54,7 @@ export const Title = styled.a`
 export const Desc = styled.h2`
   margin-bottom: ${smMarginY}px;
   font-family: 'Luckiest Guy';
-  font-size: 5em;
+  font-size: 3em;
   font-weight: lighter;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
   text-decoration: line-through;
@@ -64,6 +64,9 @@ export const Desc = styled.h2`
   line-height: 115%;
   color: white;
 
+  @media (min-width: ${smWidth - 100}px) {
+    font-size: 5em;
+  }
   @media (min-width: ${smWidth}px) {
     font-size: 6em;
   }
