@@ -11,7 +11,7 @@ import {
 } from './Informations.styled.js'
 
 export default () => (
-  <Section aria-labelledby="o-que-e-piii-js">
+  <Section aria-labelledby='o-que-e-piii-js'>
     <Container>
       <Example>
         <CodePen
@@ -23,11 +23,13 @@ export default () => (
       </Example>
       <Content>
         <Text>
-          <Title id="o-que-e-piii-js">O Que é Piii.js?</Title>
+          <Title id='o-que-e-piii-js'>O Que é Piii.js?</Title>
           <p>
             <b>Piii.js</b> é uma biblioteca JavaScript destinada a filtragem de
-            palavras em um texto com foco principal às <b>palavras de baixo
-            calão</b> (conhecidas como "palavrões") da língua portuguesa.
+            palavras em um texto com foco principal
+            às <a href='https://super.abril.com.br/ciencia/a-ciencia-do-palavrao/'>
+            <b>palavras de baixo-calão</b></a> (conhecidas como "palavrões") da
+            língua portuguesa.
           </p>
           <p>
             A ferramenta oferece uma série de opções para controlar e evitar

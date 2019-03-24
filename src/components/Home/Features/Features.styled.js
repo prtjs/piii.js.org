@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import StyledContainer from '../../styled/StyledContainer'
 
 // Design
-import { xlMarginY, smMarginY } from '../../design/margins'
+import { mdWidth, xlWidth, lgWidth } from '../../design/devices'
+import { xlMarginY, mdMarginY, smMarginY } from '../../design/margins'
 import { darkOrange, purple } from '../../design/colors'
 
 // Utils
@@ -12,13 +12,37 @@ const lighttOrange = handleColor(darkOrange, (x) => x + 10 * 17)
 const lighttPurple = handleColor(purple, (x) => x + 10 * 17)
 
 export const Section = styled.section`
-  padding: ${xlMarginY}px 0;
+  padding: ${smMarginY}px 0;
+
+  @media (min-width: ${mdWidth}px) {
+    padding: ${mdMarginY}px 0;
+  }
+  @media (min-width: ${xlWidth}px) {
+    padding: ${xlMarginY}px 0;
+  }
 `
-export const Container = styled(StyledContainer)`
-  display: flex;
+export const SubContainer = styled.div`
+  display: block;
+  overflow-x: scroll;
+  white-space: nowrap;
+  box-shadow: inset 15px 0 15px -15px rgba(0,0,0,.05),
+    inset -15px 0 15px -15px rgba(0,0,0,.05);
+
+  * {
+    white-space: normal;
+  }
+  @media (min-width: ${lgWidth}px) {
+    display: flex;
+    overflow-x: hidden;
+    white-space: normal;
+    box-shadow: unset;
+  }
 `
 export const Item = styled.article`
-  padding: 0 ${smMarginY}px;
+  display: inline-block;
+  padding: 0 10px;
+  vertical-align: top;
+  width: 250px;
   text-align: center;
 
   &:first-child {
@@ -26,6 +50,10 @@ export const Item = styled.article`
   }
   &:last-child {
     padding-right: 0;
+  }
+
+  @media (min-width: ${lgWidth}px) {
+    flex: 1;
   }
 `
 export const ItemIcon = styled.i`

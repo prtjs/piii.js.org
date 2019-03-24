@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
+// Utils
+import { lightBlue } from '../design/colors'
+
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
   @import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
@@ -20,5 +23,9 @@ export default createGlobalStyle`
 
   body {
     font-family: Helvetica, Arial, sans-serif;
+
+    a {
+      color: ${lightBlue};
+    }
   }
 `
