@@ -26,9 +26,9 @@ export default () => (
           <Title id='o-que-e-piii-js'>O Que é Piii.js?</Title>
           <p>
             <b>Piii.js</b> é uma biblioteca JavaScript destinada a filtragem de
-            palavras em um texto com foco principal às
-            <a href='https://super.abril.com.br/ciencia/a-ciencia-do-palavrao/'>
-            <b>palavras de baixo calão</b></a> (conhecidas como "palavrões") da
+            palavras em um texto com foco principal
+            às <a href='https://super.abril.com.br/ciencia/a-ciencia-do-palavrao/'>
+            <b>palavras de baixo-calão</b></a> (conhecidas como "palavrões") da
             língua portuguesa.
           </p>
           <p>
