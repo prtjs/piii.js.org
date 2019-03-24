@@ -19,7 +19,7 @@ import StyledContainer from '../../styled/StyledContainer'
     <Item>
       <ItemIcon
         className={'fas fa-' + icon}
-        aria-hidden="true"
+        aria-hidden='true'
         color={isEven ? 'orange' : 'purple'}
       />
       <ItemTitle>{title}</ItemTitle>
@@ -37,7 +37,8 @@ export default () => (
           title='Ignora caixas'
         >
           Não se preocupe como o modo com o usuário escreverá o palavrão. Seja
-          em caixa-alta ou baixa, o Piii.js vai ignorá-las e filtrá-las do
+          em <a href='https://pt.wikipedia.org/wiki/Caixa_alta_e_caixa_baixa'>
+          caixa-alta ou baixa</a>, o Piii.js vai ignorá-las e filtrá-las do
           mesmo jeito.
         </Info>
         <Info
@@ -45,16 +46,18 @@ export default () => (
           isEven={false}
           title='Ignora acentuações'
         >
-          Não se preocupe com qualquer tipo de acentuação ou caracteres
-          especiais que o usuário poderia usar para burlar o filtro, o Piii.js
-          permite que você manipule-os antes.
+          Não se preocupe com qualquer tipo de
+          <a href='https://pt.wikipedia.org/wiki/Diacr%C3%ADtico'>acentuação</a>
+          ou caracteres especiais que o usuário poderia usar para burlar o filtro,
+          o Piii.js permite que você manipule-os antes.
         </Info>
         <Info
           icon='brush'
           isEven={true}
           title='Ignora 1337'
         >
-          Não se preocupe com o alfabeto <span aria-label="leet">1337</span>,
+          Não se preocupe com o alfabeto <span aria-label='leet'>
+          <a href='https://pt.wikipedia.org/wiki/Leet'>1337</a></span>,
           o Piii.js deixa você escrever e configurar um alfabeto personalizado,
           relacionando números ou outros símbolos a letras.
         </Info>
