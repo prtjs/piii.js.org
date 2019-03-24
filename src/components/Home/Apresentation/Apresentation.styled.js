@@ -4,7 +4,7 @@ import StyledContainer from '../../styled/StyledContainer'
 // Design
 import { smMarginY, mdMarginY, lgMarginY } from '../../design/margins'
 import { purple, blue, orange, darkOrange } from '../../design/colors'
-import { smWidth, mdWidth, lgWidth, xlWidth } from '../../design/devices'
+import { smWidth, lgWidth, xlWidth } from '../../design/devices'
 
 // Utils
 import handleColor from 'handle-hex-colors'
