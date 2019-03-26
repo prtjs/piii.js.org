@@ -29,7 +29,7 @@ export default () => (
           filtro de<br />
           palavrões.
         </Desc>
-        <Btn  href="#">
+        <Btn to="/docs/instalacao">
           Ler a documentação
           {` `}
           <BtnIcon aria-hidden="true">

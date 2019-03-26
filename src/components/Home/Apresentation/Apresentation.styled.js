@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import StyledContainer from '../../styled/StyledContainer'
+import { Link } from 'gatsby'
 
 // Design
 import { smMarginY, mdMarginY, lgMarginY } from '../../design/margins'
@@ -71,7 +72,7 @@ export const Desc = styled.h2`
     font-size: 6em;
   }
 `
-export const Btn = styled.a`
+export const Btn = styled(Link)`
   display: inline-block;
   padding: 20px 40px;
   border-radius: 5px;

@@ -42,7 +42,7 @@ export const Link = styled(GatsbyLinkForSC)`
   }}
 
   &:hover {
-    ${({ scIsActive }) => scIsActive ? '#eee' : 'gray'} 
+    color: ${({ scIsActive }) => scIsActive ? '#eee' : 'gray'}
   }
   &:active {
     color: ${orange};

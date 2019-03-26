@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import StyledContainer from '../styled/StyledContainer'
-import { HybridLink } from './Header.utils'
+import HybridLink from '../HybridLink'
 
 // Design
 import { orange, purple, blue } from '../design/colors'

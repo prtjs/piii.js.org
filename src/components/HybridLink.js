@@ -6,7 +6,7 @@ import { Link as GatsbyLink } from 'gatsby'
  *
  * Gist: <https://gist.github.com/theuves/079ac0fbb4047e8e676e7237195a96d0>
  */
-export const HybridLink = ({ children, ...props }) => {
+export default ({ children, ...props }) => {
   if (!props.href) {
     return (
       <GatsbyLink {...props}>

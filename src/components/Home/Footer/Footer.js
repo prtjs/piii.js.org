@@ -1,4 +1,5 @@
 import React from 'react'
+import HybridLink from '../../HybridLink'
 
 import {
   Footer,
@@ -15,39 +16,39 @@ const links = [
   {
     section: 'Documentação',
     data: [
-      { title: 'Instalação', url: '#' },
-      { title: 'Usando', url: '#' },
-      { title: 'Opção aliases', url: '#' },
-      { title: 'Opção filters', url: '#' },
-      { title: 'Opção repeated', url: '#' },
-      { title: 'Opção censor', url: '#' },
-      { title: 'Opção cleaner', url: '#' }
+      { isLocal: true, title: 'Instalação', url: '/docs/instalacao' },
+      { isLocal: true, title: 'Usando', url: '/docs/usando' },
+      { isLocal: true, title: 'Opção aliases', url: '/docs/options/aliases' },
+      { isLocal: true, title: 'Opção filters', url: '/docs/options/filters' },
+      { isLocal: true, title: 'Opção repeated', url: '/docs/options/repeated' },
+      { isLocal: true, title: 'Opção censor', url: '/docs/options/censor' },
+      { isLocal: true, title: 'Opção cleaner', url: '/docs/options/cleaner' }
     ]
   },
   {
     section: 'Repositórios',
     data: [
-      { title: 'piii.js', url: '#' },
-      { title: 'piii.js.org', url: '#' },
-      { title: 'piii-filters', url: '#' }
+      { title: 'piii.js', url: 'https://github.com/piiijs/piii.js' },
+      { title: 'piii.js.org', url: 'https://github.com/piiijs/piii.js.org' },
+      { title: 'piii-filters', url: 'https://github.com/piiijs/piii-filters' }
     ]
   },
   {
     section: 'Links',
     data: [
-      { title: 'NPM', url: '#' },
-      { title: 'RunKit', url: '#' },
-      { title: 'GitHub Issues', url: '#' },
-      { title: 'GitHub Pull Requests', url: '#' }
+      { title: 'NPM', url: 'https://npmjs.com/packages/piii' },
+      { title: 'RunKit', url: 'https://npm.runkit.com/piii' },
+      { title: 'GitHub Issues', url: 'https://github.com/piiijs/piii.js/issues' },
+      { title: 'GitHub Pull Requests', url: 'https://github.com/piiijs/piii.js/pulls' }
     ]
   },
   {
     section: 'Autor',
     data: [
-      { title: 'Homepage', url: '#' },
-      { title: 'GitHub', url: '#' },
-      { title: 'Twitter', url: '#' },
-      { title: 'Fazer doação', url: '#' }
+      { title: 'Homepage', url: 'https://theuves.github.io/' },
+      { title: 'GitHub', url: 'https://github.com/theuves' },
+      { title: 'Twitter', url: 'https://twitter.com/theuves' },
+      { title: 'Fazer doação', url: 'https://www.paypal.com/donate/?token=UqEz7FgqbnlFNdv7g251EBvrqyeCjzsn7cPbe5Anwt2lLpOv9vHxfzEI7QOSzIxe3t0WSm&country.x=BR&locale.x=BR' }
     ]
   }
 ]
@@ -64,9 +65,15 @@ export default () => (
             <LinksItems>
               {link.data.map((site, dataIndex) => (
                 <LinksItem key={dataIndex}>
-                  <a href={site.url}>
-                    {site.title}
-                  </a>
+                  {site.isLocal ? (
+                    <HybridLink to={site.url}>
+                      {site.title}
+                    </HybridLink>
+                  ) : (
+                    <HybridLink href={site.url}>
+                      {site.title}
+                    </HybridLink>
+                  )}
                 </LinksItem>
               ))}
             </LinksItems>
