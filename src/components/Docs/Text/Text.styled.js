@@ -1,7 +1,6 @@
-import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
-const StyledText = styled.article`
+export const Article = styled.article`
   padding: 0 30px 30px 30px;
   margin-bottom: 25px;
   border-radius: 3px;
@@ -88,27 +87,10 @@ const StyledText = styled.article`
     font-size: 14px;
   }
 `
-
-const GitHubLink = styled.a`
+export const GitHubLink = styled.a`
   display: block;
   margin-bottom: 50px;
   font-size: 14px;
   font-style: italic;
   color: gray;
 `
-
-function getGitHubDocUrl(filename) {
-  const GH_BASE = 'https://github.com/piiijs/piii.js.org/blob/master/src/docs/'
-
-  return GH_BASE + filename
-}
-
-export default ({ html, filename }) => (
-  <Fragment>
-    <StyledText dangerouslySetInnerHTML={{ __html: html }} />
-
-    <GitHubLink href={getGitHubDocUrl(filename)}>
-      Viu algum erro? Ajude-nos corrigindo no GitHub.
-    </GitHubLink>
-  </Fragment>
-)

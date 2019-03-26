@@ -2,10 +2,16 @@ import styled from 'styled-components'
 import StyledContainer from '../styled/StyledContainer'
 import { HybridLink } from './Header.utils'
 
+// Design
+import { purple, blue } from '../design/colors'
+
+
 export const StyledHeader = styled.header`
-  padding: 2.5px 0;
+  padding: 10px 0;
+  position: relative;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .25);
   color: white;
-  background-color: black;
+  background-image: linear-gradient(45deg, ${blue}, ${purple});
 `
 export const Container = styled(StyledContainer)`
   display: flex;
@@ -25,7 +31,8 @@ export const Link = styled(HybridLink)`
 `
 export const Brand = styled.h1`
   margin: 0;
-  font-size: 2.25em;
+  font-size: 2em;
+  font-weight: lighter;
 `
 export const List = styled.ul`
   display: flex;
@@ -33,7 +40,8 @@ export const List = styled.ul`
   list-style-type: none;
 `
 export const Item = styled.li`
-  font-size: 1.15em;
+  font-size: 1em;
+  font-weight: lighter;
 
   &:not(:last-child) {
     margin-right: 20px;

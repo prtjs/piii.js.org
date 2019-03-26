@@ -1,15 +1,8 @@
-import React from 'react'
 import styled from 'styled-components'
-import { filterObj } from '../../utils'
-import { Link as GatsbyLink } from 'gatsby'
 
-const GatsbyLinkForSC = ({ ...props }) => {
-  props = filterObj(props, (prop) => !/^sc/.test(prop))
+import { GatsbyLinkForSC } from './Topics.utils'
 
-  return <GatsbyLink {...props} />
-}
-
-const List = styled.ul`
+export const List = styled.ul`
   margin: 0;
   padding: 10px;
   border-radius: 3px;
@@ -21,10 +14,10 @@ const List = styled.ul`
     width: 100%;
   }
 `
-const Item = styled.li`
+export const Item = styled.li`
   padding: .25em 0;
 `
-const Link = styled(GatsbyLinkForSC)`
+export const Link = styled(GatsbyLinkForSC)`
   padding: .35em .75em;
   display: block;
   border-radius: 3px;
@@ -43,15 +36,3 @@ const Link = styled(GatsbyLinkForSC)`
     color: darkred;
   }
 `
-
-export default ({ links, currentPath }) => (
-  <List>
-    {links.map(({ path, title }, index) => (
-      <Item key={index}>
-        <Link to={path} scIsActive={currentPath === path}>
-          {title}
-        </Link>
-      </Item>
-    ))}
-  </List>
-)
