@@ -16,12 +16,13 @@ import {
 export default ({
   pageContext: {
     html,        // HTML gerado a partir do markdown.
+    title,       // Título da página
     currentPath, // Caminho para o documento atual.
     filename,    // Nome do arquivo que será usado para linkar ao GitHub.
     links        // Links de todos os documentos.
   }
 }) => (
-  <Layout>
+  <Layout articleTitle={title}>
     <Header />
     <Container>
       <Main>

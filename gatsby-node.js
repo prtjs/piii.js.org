@@ -33,6 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: blogPostTemplate,
         context: {
           html: node.html,
+          title: node.frontmatter.title,
           currentPath: node.frontmatter.path,
           filename: path.parse(node.fileAbsolutePath).base,
           links
