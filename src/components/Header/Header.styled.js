@@ -3,7 +3,7 @@ import StyledContainer from '../styled/StyledContainer'
 import { HybridLink } from './Header.utils'
 
 // Design
-import { purple, blue } from '../design/colors'
+import { orange, purple, blue } from '../design/colors'
 
 
 export const StyledHeader = styled.header`
@@ -26,6 +26,7 @@ export const Link = styled(HybridLink)`
     opacity: .8;
   }
   &:active {
+    color: ${orange};
     opacity: .9;
   }
 `

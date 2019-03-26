@@ -18,8 +18,8 @@ const Header = () => (
       </Brand>
       <List>
         <Item>
-          <Link href='https://github.com/piiijs/piii.js/releases'>
-            v4.0.2
+          <Link to='/docs/instalation'>
+            Documentação
           </Link>
         </Item>
         <Item>

@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 
+// Design
+import { blue, orange } from '../../design/colors'
+
 export const Article = styled.article`
   padding: 0 30px 30px 30px;
   margin-bottom: 25px;
@@ -20,7 +23,7 @@ export const Article = styled.article`
   }
 
   a {
-    color: var(--blue);
+    color: ${blue};
 
     &:hover {
       text-decoration: none;
@@ -30,6 +33,9 @@ export const Article = styled.article`
     }
   }
 
+  ul {
+    padding-left: 40px;
+  }
   ul p,
   ol p {
     margin: 0;
@@ -45,12 +51,11 @@ export const Article = styled.article`
   h4,
   h5,
   h6 {
-    padding-bottom: .35em;
+    display: block;
     margin-top: 1em;
     margin-bottom: .75em;
-    border-bottom: solid 1px #f5f5f5;
-    overflow: auto;
-    text-overflow: ellipsis;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #eee;
   }
 
   h1 { font-size: calc(1em + .25em * 6); }
@@ -65,7 +70,7 @@ export const Article = styled.article`
     background-color: #eee;
   }
   code {
-    padding: .05em .15em;
+    padding: .05em .25em;
   }
   pre code {
     padding: unset;
@@ -77,9 +82,9 @@ export const Article = styled.article`
   }
 
   blockquote {
-    margin: 0;
+    margin: 15px 0;
     padding-left: 1em;
-    border-left: solid .25em var(--orange-light);
+    border-left: solid .25em ${orange};
     color: gray;
   }
 

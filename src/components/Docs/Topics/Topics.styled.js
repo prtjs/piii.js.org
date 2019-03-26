@@ -1,6 +1,8 @@
-import styled from 'styled-components'
-
+import styled, { css } from 'styled-components'
 import { GatsbyLinkForSC } from './Topics.utils'
+
+// Design
+import { orange, blue, purple } from '../../design/colors'
 
 export const List = styled.ul`
   margin: 0;
@@ -18,7 +20,7 @@ export const Item = styled.li`
   padding: .25em 0;
 `
 export const Link = styled(GatsbyLinkForSC)`
-  padding: .35em .75em;
+  padding: .5em .9em;
   display: block;
   border-radius: 3px;
   font-family: Helvetica, Arial, sans-serif;
@@ -26,13 +28,23 @@ export const Link = styled(GatsbyLinkForSC)`
   color: black;
 
   // Specials
-  font-weight: ${props => props.scIsActive ? 'bold' : 'lighter'};
-  background-color: ${props => props.scIsActive ? '#ddd' : '#eee'};
+  ${({ scIsActive }) => {
+    if (scIsActive) {
+      return css`
+        background-image: linear-gradient(45deg, ${blue}, ${purple});
+        color: white;
+      `
+    }
+
+    return css`
+      background-color: #ddd;
+    `
+  }}
 
   &:hover {
-    color: gray;
+    ${({ scIsActive }) => scIsActive ? '#eee' : 'gray'} 
   }
   &:active {
-    color: darkred;
+    color: ${orange};
   }
 `

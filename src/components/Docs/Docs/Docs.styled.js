@@ -11,7 +11,7 @@ export const Main = styled.main`
   }
 `
 export const Aside = styled.aside`
-  width: 200px;
+  width: 250px;
 
   @media (max-width: 620px) {
     padding: 20px 0;
