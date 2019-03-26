@@ -43,8 +43,8 @@ module.exports = {
         name:             'Piii.js',
         short_name:       'Piii.js',
         start_url:        '/',
-        background_color: '#303952',
-        theme_color:      '#303952',
+        background_color: '#8e44ad',
+        theme_color:      '#8e44ad',
         display:          'minimal-ui',
         icon:             'src/images/icon.png'
       }
