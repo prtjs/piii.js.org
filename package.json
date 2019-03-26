@@ -26,6 +26,7 @@
     "gatsby-transformer-sharp": "^2.1.8",
     "gh-pages": "^2.0.1",
     "handle-hex-colors": "0.0.2",
+    "instant.page": "^1.2.2",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",

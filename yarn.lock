@@ -6408,6 +6408,11 @@ inquirer@^6.2.0:
     strip-ansi "^5.0.0"
     through "^2.3.6"
 
+instant.page@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/instant.page/-/instant.page-1.2.2.tgz#8907ada802f6cd114ba74c5131c409e42a5938ed"
+  integrity sha512-Vy1k/9R+1el6qgX4+j0z7G055etgYZp71MEbyFp22ydYGbDV+9xLJ27NJ/u6QPKkK/cJkmJn1LfLnqlQQLK0VQ==
+
 internal-ip@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/internal-ip/-/internal-ip-3.0.1.tgz#df5c99876e1d2eb2ea2d74f520e3f669a00ece27"
