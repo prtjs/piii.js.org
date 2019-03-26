@@ -8,7 +8,6 @@ const StyledText = styled.article`
   border: solid 1px #eee;
   line-height: 180%;
   font-size: 16px;
-  font-family: Helvetica, Arial, sans-serif;
   box-shadow: 1px 1px 1px 0 #ddd;
 
   &,

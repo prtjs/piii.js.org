@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 // Components
-import Header from './Header'
 import StyledGlobal from './styled/StyledGlobal'
 
 export default ({ children }) => (

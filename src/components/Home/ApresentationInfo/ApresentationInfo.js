@@ -2,8 +2,7 @@ import React from 'react';
 import Container from '../../styled/StyledContainer'
 
 import {
-  Section,
-  Flex
+  Section
 } from './ApresentationInfo.styled.js'
 
 export default () => (

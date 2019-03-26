@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 // Components
 import Layout from '../Layout'
+import Header from '../Header/Header'
 import Container from '../styled/StyledContainer'
 import Topics from './Topics'
 import Text from './Text'
@@ -38,23 +39,21 @@ const Article = styled.article`
 export default ({
   pageContext: {
     html,        // HTML gerado a partir do markdown.
-    currentPath,        // Caminho para o documento atual.
+    currentPath, // Caminho para o documento atual.
     filename,    // Nome do arquivo que será usado para linkar ao GitHub.
     links        // Links de todos os documentos.
   }
 }) => (
   <Layout>
+    <Header />
     <Container>
       <Main>
-
         <Article>
           <Text html={html} filename={filename} />
         </Article>
-
         <Aside>
           <Topics links={links} currentPath={currentPath} />
         </Aside>
-
       </Main>
     </Container>
   </Layout>

@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 // Design
 import { smMarginY } from '../../design/margins'
-import { mdWidth } from '../../design/devices'
 
 export const Section = styled.section`
   text-align: center;
