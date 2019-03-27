@@ -57,7 +57,7 @@ export const Item = styled.article`
   }
 `
 export const ItemIcon = styled.i`
-  display: inline-flex;
+  display: inline-flex !important;
   margin-bottom: 15px;
   padding: 10px;
   width: 2em;
