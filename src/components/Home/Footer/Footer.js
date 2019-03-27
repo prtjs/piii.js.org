@@ -87,7 +87,7 @@ export default () => (
           Feito com <i className="fas fa-heart" /> em Dourados-MS, Brasil.
         </div>
         <div>
-          &copy; 2015-2019 Matheus Alves
+          &copy; 2016-2019 Matheus Alves
         </div>
       </Container>
     </FooterSecondary>
