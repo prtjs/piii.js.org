@@ -36,9 +36,9 @@ export default () => (
           isEven={true}
           title='Ignora caixas'
         >
-          Não se preocupe como o modo com o usuário escreverá o palavrão. Seja
+          Não se preocupe com o modo como o usuário escreverá o palavrão. Seja
           em <a href='https://pt.wikipedia.org/wiki/Caixa_alta_e_caixa_baixa'>caixa-alta ou baixa</a>,
-          o Piii.js vai ignorá-las e filtrá-las do mesmo jeito.
+          o Piii.js vai ignorá-las e filtrá-lo do mesmo jeito.
         </Info>
         <Info
           icon='fill-drip'
@@ -66,7 +66,7 @@ export default () => (
           title='Ignora outras coisas'
         >
           Não se preocupe com letras repetidas. Crie filtros personalizados.
-          Tenha a posssibilidade de manipular os palavrões filtrados antes de
+          Tenha a possibilidade de manipular os palavrões filtrados antes de
           censurá-los.
         </Info>
       </SubContainer>
